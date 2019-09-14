@@ -16,6 +16,7 @@
 		DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A53232CEC0200F85CC3 /* ServiceLayer.swift */; };
 		DEB97A56232CEC3300F85CC3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A55232CEC3300F85CC3 /* NetworkService.swift */; };
 		DEB97A59232CECF400F85CC3 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A58232CECF400F85CC3 /* Types.swift */; };
+		DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DEB97A53232CEC0200F85CC3 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		DEB97A55232CEC3300F85CC3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DEB97A58232CECF400F85CC3 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAddressDto.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		DEB97A51232CEBE000F85CC3 /* BuisinessLogic */ = {
 			isa = PBXGroup;
 			children = (
+				DEB97A5C232D014000F85CC3 /* Model */,
 				DEB97A57232CECE800F85CC3 /* Helper */,
 				DEB97A52232CEBE900F85CC3 /* ServiceLayer */,
 			);
@@ -127,6 +130,14 @@
 				DEB97A58232CECF400F85CC3 /* Types.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		DEB97A5C232D014000F85CC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +257,7 @@
 			files = (
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
+				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
 				DEB97A56232CEC3300F85CC3 /* NetworkService.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
