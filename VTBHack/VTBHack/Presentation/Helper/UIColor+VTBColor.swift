@@ -11,6 +11,12 @@ import UIKit
 extension UIColor {
     struct Color {
         static let darkBlue = UIColor(hex: "#10234D")
+        static let blueButtonBorder = UIColor(hex: "#ebebeb") //238,238,238
+        static let backgroundGray = UIColor(hex: "#f8f8f8") //248,248,248
+        static let statusGreen = UIColor(hex: "#65bc36")
+        static let darkGray = UIColor(hex: "#3c3c3c")
+            static let blueText = UIColor(hex: "#003ec3")
+        
     }
 }
 

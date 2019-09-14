@@ -27,8 +27,8 @@ final class RequestSender: RequestSenderProtocol {
     
     init() {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 10
-        configuration.timeoutIntervalForResource = 10
+        configuration.timeoutIntervalForRequest = 5
+        configuration.timeoutIntervalForResource = 5
         sessionManager = Alamofire.SessionManager(configuration: configuration)
     }
     

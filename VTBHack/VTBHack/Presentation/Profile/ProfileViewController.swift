@@ -11,18 +11,71 @@ import AVFoundation
 
 class ProfileViewController: UIViewController {
     @IBOutlet var headerView: UIView!
+    @IBOutlet var avatarImageView: UIImageView!
+    @IBOutlet var avatarContainerView: UIView!
     
-    @IBOutlet var lll: UILabel!
+    @IBOutlet var nickNameLabel: UILabel!
+    @IBOutlet var phoneLabel: UILabel!
+    
+    @IBOutlet var ceeperNameLabel: UILabel!
+    @IBOutlet var keepBalanceLabel: UILabel!
+    
+    @IBOutlet var statusLabel: UILabel!
+    
+    @IBOutlet var identifierLabel: UILabel!
+    
+   
     let imagePicker = UIImagePickerController()
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ServiceLayer.shared.accountService.obtainSession { result in
+            switch result {
+            case .error(let error):
+                print(error)
+            case .success(let model):
+                dump(model)
+                
+                let address = "4cdf2e56b045b7a526a2130213a3bf678bbf551f"
+                ServiceLayer.shared.accountService.obtainAccountBalance(address: address) { result in
+                    switch result {
+                    case .error(let error):
+                        print(error)
+                    case .success(let model):
+                        dump(model)
+                    }
+                }
+            }
+        }
+        
         setupUI()
     }
     
     func setupUI() {
         headerView.backgroundColor = UIColor.Color.darkBlue
-        imagePicker.delegate = self
+        view.backgroundColor = UIColor.Color.backgroundGray
+        avatarImageView.tintColor = UIColor.Color.blueButtonBorder
+        avatarImageView.image = UIImage.Image.profileSceleton
+        nickNameLabel.textColor = .white
+        nickNameLabel.text = "Павло Павел"
+        phoneLabel.textColor = .white
+        phoneLabel.text = "+98555555555"
+        avatarContainerView.layer.cornerRadius = 32.0
+        avatarContainerView.clipsToBounds = true
+        
+        ceeperNameLabel.text = "Кошелек"
+        
+        
+        
+        keepBalanceLabel.text = "\(900)Р"
+        keepBalanceLabel.textColor = UIColor.Color.blueText
+        
+        identifierLabel.text = "+73267366723672"
+        identifierLabel.textColor = UIColor.Color.darkGray
+        
+        statusLabel.text = "Доступен"
+        statusLabel.textColor = UIColor.Color.statusGreen
     }
     
     @IBAction func actionButton(_ sender: Any) {
@@ -32,33 +85,32 @@ class ProfileViewController: UIViewController {
     }
 }
 
-extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController,
-                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let selectedImage = info[.originalImage] as? UIImage {
-            let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy : CIDetectorAccuracyHigh])!
-            let ciImage: CIImage = CIImage(image: selectedImage)!
-            var qrCodeLink: String? = nil
-            
-            let features = detector.features(in: ciImage)
-            for feature in features as! [CIQRCodeFeature] {
-                qrCodeLink = feature.messageString
-            }
-            let decoder = JSONDecoder()
-            if
-                let qrCodeLink = qrCodeLink,
-                let data = qrCodeLink.data(using: .utf8),
-                let adressDto = try? decoder.decode(QRAddressDto.self, from: data) {
-                lll.text = adressDto.address
-                
-            }else{
-                
-            }
-            
-        }
-        else{
-            
-        }
-        imagePicker.dismiss(animated: true, completion: nil)
-    }
-}
+//extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//    func imagePickerController(_ picker: UIImagePickerController,
+//                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        if let selectedImage = info[.originalImage] as? UIImage {
+//            let detector = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy : CIDetectorAccuracyHigh])!
+//            let ciImage: CIImage = CIImage(image: selectedImage)!
+//            var qrCodeLink: String? = nil
+//
+//            let features = detector.features(in: ciImage)
+//            for feature in features as! [CIQRCodeFeature] {
+//                qrCodeLink = feature.messageString
+//            }
+//            let decoder = JSONDecoder()
+//            if
+//                let qrCodeLink = qrCodeLink,
+//                let data = qrCodeLink.data(using: .utf8),
+//                let adressDto = try? decoder.decode(QRAddressDto.self, from: data) {
+//
+//            }else{
+//
+//            }
+//
+//        }
+//        else{
+//
+//        }
+//        imagePicker.dismiss(animated: true, completion: nil)
+//    }
+//}
