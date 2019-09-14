@@ -29,6 +29,26 @@ class ProfileViewController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ServiceLayer.shared.accountService.obtainSession { result in
+            switch result {
+            case .error(let error):
+                print(error)
+            case .success(let model):
+                dump(model)
+                
+                let address = "4cdf2e56b045b7a526a2130213a3bf678bbf551f"
+                ServiceLayer.shared.accountService.obtainAccountBalance(address: address) { result in
+                    switch result {
+                    case .error(let error):
+                        print(error)
+                    case .success(let model):
+                        dump(model)
+                    }
+                }
+            }
+        }
+        
         setupUI()
     }
     

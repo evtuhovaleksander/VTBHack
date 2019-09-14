@@ -18,6 +18,7 @@ class CheckInfoRequest: RequestConfig<CheckInfoDto> {
         let parser = CheckInfoParser()
         let rawURL = "/check/info?\(rawQRCode)"
         super.init(
+            baseURL: "https://herokutestforrx.herokuapp.com",
             url: rawURL,
             parameters: parameters,
             headers: headers,

@@ -12,14 +12,14 @@ class ServiceLayer {
     static let shared = ServiceLayer()
     
     let requestService: RequestSender
-//    let authService: AuthService
+    let accountService: AccountService
 //    let incoiveService: InvoiceService
     let checkService: CheckInfoService
     
     private init() {
         requestService = RequestSender()
         
-//        authService = AuthService(requestSender: requestService)
+        accountService = AccountService(requestSender: requestService)
 //        incoiveService = InvoiceService(requestSender: requestService)
         checkService = CheckInfoService(requestSender: requestService)
     }
