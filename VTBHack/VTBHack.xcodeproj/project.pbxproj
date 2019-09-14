@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		083EC13FACE63EA2621C8EC9 /* Pods_VTBHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */; };
+		30F9A4E3232D50990043082C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9A4E1232D50990043082C /* CardCell.swift */; };
+		30F9A4E4232D50990043082C /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4E2232D50990043082C /* CardCell.xib */; };
 		CABAC173232D0EA80069D545 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AccountService.swift */; };
 		CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC177232D0FFA0069D545 /* AuthRequest.swift */; };
 		CABAC17D232D10930069D545 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17C232D10930069D545 /* Parser.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTBHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F9A4E1232D50990043082C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		30F9A4E2232D50990043082C /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
 		62958855CA6EBB12BBDA1C58 /* Pods-VTBHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.debug.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDAF2201AE63377F42FEEC1 /* Pods-VTBHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.release.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.release.xcconfig"; sourceTree = "<group>"; };
 		CABAC172232D0EA80069D545 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 				DEB97A45232CDFFF00F85CC3 /* Assets.xcassets */,
 				DEB97A47232CDFFF00F85CC3 /* LaunchScreen.storyboard */,
 				DEB97A4A232CDFFF00F85CC3 /* Info.plist */,
+				30F9A4E1232D50990043082C /* CardCell.swift */,
+				30F9A4E2232D50990043082C /* CardCell.xib */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
 				DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */,
 				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
+				30F9A4E4232D50990043082C /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +419,7 @@
 				DEB97A7B232D256C00F85CC3 /* BlueNavigationController.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
 				CABAC173232D0EA80069D545 /* AccountService.swift in Sources */,
+				30F9A4E3232D50990043082C /* CardCell.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
 				DEB97A7D232D28E100F85CC3 /* BlueButton.swift in Sources */,

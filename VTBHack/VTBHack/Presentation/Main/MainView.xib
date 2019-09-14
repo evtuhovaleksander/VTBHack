@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d9q-jX-phA">
-                    <rect key="frame" x="8" y="17" width="60" height="40"/>
+                    <rect key="frame" x="8" y="10" width="60" height="54"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="6BU-fP-6gX"/>
                         <constraint firstAttribute="height" constant="40" id="rQQ-ij-Y20"/>
@@ -30,22 +30,31 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRD-j6-RoS">
-                    <rect key="frame" x="321.5" y="28" width="37.5" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <rect key="frame" x="319" y="28" width="40" height="18"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2o-fZ-hCl">
+                    <rect key="frame" x="8" y="73" width="359" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="V5f-cf-UaE"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="d9q-jX-phA" secondAttribute="bottom" constant="17" id="0lc-2B-uX9"/>
                 <constraint firstItem="d9q-jX-phA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2Gf-qn-Y3N"/>
+                <constraint firstItem="x2o-fZ-hCl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="DXC-ah-Gjx"/>
                 <constraint firstItem="SYi-Vu-NhX" firstAttribute="leading" secondItem="d9q-jX-phA" secondAttribute="trailing" constant="8" id="Hhx-Sg-5s0"/>
                 <constraint firstItem="SYi-Vu-NhX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="KQ0-Dm-dwe"/>
+                <constraint firstAttribute="trailing" secondItem="x2o-fZ-hCl" secondAttribute="trailing" constant="8" id="L3b-bw-O4t"/>
+                <constraint firstAttribute="bottom" secondItem="x2o-fZ-hCl" secondAttribute="bottom" id="M32-HG-O6n"/>
                 <constraint firstItem="rRD-j6-RoS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="QNI-4e-by0"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rRD-j6-RoS" secondAttribute="trailing" constant="16" id="dNo-0d-MER"/>
+                <constraint firstAttribute="height" secondItem="d9q-jX-phA" secondAttribute="height" constant="20" id="gPw-jG-eJu"/>
                 <constraint firstItem="d9q-jX-phA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="xlh-UX-H47"/>
-                <constraint firstItem="d9q-jX-phA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="17" id="zgX-mJ-Xgp"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -55,8 +64,9 @@
                 <outlet property="cardImage" destination="d9q-jX-phA" id="I1M-kN-yQa"/>
                 <outlet property="cardName" destination="SYi-Vu-NhX" id="Jvz-Iu-czu"/>
                 <outlet property="moneyAmount" destination="rRD-j6-RoS" id="Abh-lx-vCG"/>
+                <outlet property="separator" destination="x2o-fZ-hCl" id="DH9-dk-7EW"/>
             </connections>
-            <point key="canvasLocation" x="-173.91304347826087" y="-71.986607142857139"/>
+            <point key="canvasLocation" x="-174.63768115942031" y="-72.321428571428569"/>
         </view>
     </objects>
 </document>

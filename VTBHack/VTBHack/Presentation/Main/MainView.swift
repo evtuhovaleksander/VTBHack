@@ -13,6 +13,7 @@ class MainView: UIView {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var cardName: UILabel!
     @IBOutlet weak var moneyAmount: UILabel!
+    @IBOutlet weak var separator: UIView!
     
     
 //    override init(frame: CGRect) {
