@@ -38,6 +38,10 @@
 		DE4280BC232D8B9200EE9D78 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280BA232D8B9200EE9D78 /* MenuView.swift */; };
 		DE4280BE232D8D0400EE9D78 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE4280BD232D8D0400EE9D78 /* Menu.storyboard */; };
 		DE4280C0232D8D6600EE9D78 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280BF232D8D6600EE9D78 /* MenuViewController.swift */; };
+		DE4280C3232DA40300EE9D78 /* PeopleSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280C2232DA40300EE9D78 /* PeopleSelectorView.swift */; };
+		DE4280C5232DA44E00EE9D78 /* PeopleSelectorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4280C4232DA44E00EE9D78 /* PeopleSelectorView.xib */; };
+		DE4280C7232DA9F100EE9D78 /* SelectorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4280C6232DA9F100EE9D78 /* SelectorCell.xib */; };
+		DE4280C9232DAA0100EE9D78 /* SelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280C8232DAA0100EE9D78 /* SelectorCell.swift */; };
 		DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE534D5B232D4C0500E8F877 /* MainView.xib */; };
 		DE534D60232D4C0500E8F877 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D5C232D4C0500E8F877 /* MainView.swift */; };
 		DE534D62232D4DE600E8F877 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE534D61232D4DE600E8F877 /* AuthStoryboard.storyboard */; };
@@ -100,6 +104,10 @@
 		DE4280BA232D8B9200EE9D78 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		DE4280BD232D8D0400EE9D78 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		DE4280BF232D8D6600EE9D78 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		DE4280C2232DA40300EE9D78 /* PeopleSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleSelectorView.swift; sourceTree = "<group>"; };
+		DE4280C4232DA44E00EE9D78 /* PeopleSelectorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeopleSelectorView.xib; sourceTree = "<group>"; };
+		DE4280C6232DA9F100EE9D78 /* SelectorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorCell.xib; sourceTree = "<group>"; };
+		DE4280C8232DAA0100EE9D78 /* SelectorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorCell.swift; sourceTree = "<group>"; };
 		DE534D5B232D4C0500E8F877 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		DE534D5C232D4C0500E8F877 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE534D61232D4DE600E8F877 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
@@ -239,6 +247,17 @@
 			path = Menu;
 			sourceTree = "<group>";
 		};
+		DE4280C1232DA3E300EE9D78 /* PeopleSelector */ = {
+			isa = PBXGroup;
+			children = (
+				DE4280C2232DA40300EE9D78 /* PeopleSelectorView.swift */,
+				DE4280C4232DA44E00EE9D78 /* PeopleSelectorView.xib */,
+				DE4280C6232DA9F100EE9D78 /* SelectorCell.xib */,
+				DE4280C8232DAA0100EE9D78 /* SelectorCell.swift */,
+			);
+			path = PeopleSelector;
+			sourceTree = "<group>";
+		};
 		DE534D5A232D4C0500E8F877 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,6 +343,7 @@
 		DEB97A5D232D066C00F85CC3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE4280C1232DA3E300EE9D78 /* PeopleSelector */,
 				DE4280B8232D8B5A00EE9D78 /* Menu */,
 				DE4280AD232D709100EE9D78 /* People */,
 				DE534D5A232D4C0500E8F877 /* Main */,
@@ -434,6 +454,8 @@
 				DEB97A49232CDFFF00F85CC3 /* LaunchScreen.storyboard in Resources */,
 				DE4280B1232D739E00EE9D78 /* PeopleCell.xib in Resources */,
 				DE4280BE232D8D0400EE9D78 /* Menu.storyboard in Resources */,
+				DE4280C7232DA9F100EE9D78 /* SelectorCell.xib in Resources */,
+				DE4280C5232DA44E00EE9D78 /* PeopleSelectorView.xib in Resources */,
 				DEB97A7F232D31D100F85CC3 /* NeedAuthView.xib in Resources */,
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
 				DE534D62232D4DE600E8F877 /* AuthStoryboard.storyboard in Resources */,
@@ -510,7 +532,9 @@
 				DE4280B5232D7FE600EE9D78 /* PeopleDataSource.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
 				CABAC19A232D508F0069D545 /* InvoiceInfoDto.swift in Sources */,
+				DE4280C9232DAA0100EE9D78 /* SelectorCell.swift in Sources */,
 				CABAC173232D0EA80069D545 /* AccountService.swift in Sources */,
+				DE4280C3232DA40300EE9D78 /* PeopleSelectorView.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
 				CABAC19E232D5FCA0069D545 /* AccountAddressDto.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
