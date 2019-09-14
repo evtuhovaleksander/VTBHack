@@ -29,6 +29,11 @@
 		DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A62232D112000F85CC3 /* Profile.storyboard */; };
 		DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */; };
 		DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */; };
+		DEB97A7B232D256C00F85CC3 /* BlueNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A7A232D256C00F85CC3 /* BlueNavigationController.swift */; };
+		DEB97A7D232D28E100F85CC3 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A7C232D28E100F85CC3 /* BlueButton.swift */; };
+		DEB97A7F232D31D100F85CC3 /* NeedAuthView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A7E232D31D100F85CC3 /* NeedAuthView.xib */; };
+		DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A80232D31E000F85CC3 /* NeedAuthView.swift */; };
+		DEB97A83232D394900F85CC3 /* UIImage+VTBImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A82232D394900F85CC3 /* UIImage+VTBImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,11 @@
 		DEB97A62232D112000F85CC3 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
 		DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+VTBColor.swift"; sourceTree = "<group>"; };
+		DEB97A7A232D256C00F85CC3 /* BlueNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavigationController.swift; sourceTree = "<group>"; };
+		DEB97A7C232D28E100F85CC3 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		DEB97A7E232D31D100F85CC3 /* NeedAuthView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NeedAuthView.xib; sourceTree = "<group>"; };
+		DEB97A80232D31E000F85CC3 /* NeedAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedAuthView.swift; sourceTree = "<group>"; };
+		DEB97A82232D394900F85CC3 /* UIImage+VTBImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+VTBImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +221,8 @@
 				DEB97A69232D12AB00F85CC3 /* TopNotification */,
 				DEB97A65232D125600F85CC3 /* Helper */,
 				DEB97A64232D116D00F85CC3 /* Profile */,
+				DEB97A7A232D256C00F85CC3 /* BlueNavigationController.swift */,
+				DEB97A7C232D28E100F85CC3 /* BlueButton.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -220,6 +232,8 @@
 			children = (
 				DEB97A5E232D068D00F85CC3 /* ProfileViewController.swift */,
 				DEB97A62232D112000F85CC3 /* Profile.storyboard */,
+				DEB97A7E232D31D100F85CC3 /* NeedAuthView.xib */,
+				DEB97A80232D31E000F85CC3 /* NeedAuthView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -229,6 +243,7 @@
 			children = (
 				DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */,
 				DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */,
+				DEB97A82232D394900F85CC3 /* UIImage+VTBImage.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -302,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB97A49232CDFFF00F85CC3 /* LaunchScreen.storyboard in Resources */,
+				DEB97A7F232D31D100F85CC3 /* NeedAuthView.xib in Resources */,
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
 				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
 				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
@@ -358,18 +374,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
+				DEB97A83232D394900F85CC3 /* UIImage+VTBImage.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
 				DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */,
+				DEB97A7B232D256C00F85CC3 /* BlueNavigationController.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
 				CABAC173232D0EA80069D545 /* AuthService.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
+				DEB97A7D232D28E100F85CC3 /* BlueButton.swift in Sources */,
 				CABAC188232D13B40069D545 /* CheckInfoDto.swift in Sources */,
 				CABAC17F232D10B80069D545 /* Account.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
-				DEB97A56232CEC3300F85CC3 /* NetworkService.swift in Sources */,
 				DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
+				DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,
 				CABAC18A232D15A50069D545 /* CheckInfoService.swift in Sources */,
 				CABAC182232D11380069D545 /* RequestSender.swift in Sources */,
