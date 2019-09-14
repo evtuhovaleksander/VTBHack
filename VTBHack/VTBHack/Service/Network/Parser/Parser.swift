@@ -38,3 +38,15 @@ class CheckInfoParser: Parser<CheckInfoDto> {
         }
     }
 }
+
+class SessionParser: Parser<SessionDto> {
+    override func parse(_ response: DataResponse<Any>) -> SessionDto? {
+        guard let data = response.data else { return nil }
+        do {
+            let model = try JSONDecoder().decode(SessionDto.self, from: data)
+            return model
+        } catch {
+            return nil
+        }
+    }
+}

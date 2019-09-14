@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		083EC13FACE63EA2621C8EC9 /* Pods_VTBHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */; };
-		CABAC173232D0EA80069D545 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AuthService.swift */; };
+		CABAC173232D0EA80069D545 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AccountService.swift */; };
 		CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC177232D0FFA0069D545 /* AuthRequest.swift */; };
 		CABAC17D232D10930069D545 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17C232D10930069D545 /* Parser.swift */; };
 		CABAC17F232D10B80069D545 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17E232D10B80069D545 /* Account.swift */; };
@@ -17,6 +17,8 @@
 		CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC185232D13070069D545 /* CheckInfoRequest.swift */; };
 		CABAC188232D13B40069D545 /* CheckInfoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC187232D13B40069D545 /* CheckInfoDto.swift */; };
 		CABAC18A232D15A50069D545 /* CheckInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC189232D15A50069D545 /* CheckInfoService.swift */; };
+		CABAC18C232D20030069D545 /* SessionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC18B232D20030069D545 /* SessionRequest.swift */; };
+		CABAC18E232D22E00069D545 /* SessionDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC18D232D22E00069D545 /* SessionDto.swift */; };
 		DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */; };
 		DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A40232CDFFE00F85CC3 /* ViewController.swift */; };
 		DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A42232CDFFE00F85CC3 /* Main.storyboard */; };
@@ -31,7 +33,7 @@
 		259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTBHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62958855CA6EBB12BBDA1C58 /* Pods-VTBHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.debug.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDAF2201AE63377F42FEEC1 /* Pods-VTBHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.release.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.release.xcconfig"; sourceTree = "<group>"; };
-		CABAC172232D0EA80069D545 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CABAC172232D0EA80069D545 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		CABAC177232D0FFA0069D545 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		CABAC17C232D10930069D545 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		CABAC17E232D10B80069D545 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -40,6 +42,8 @@
 		CABAC185232D13070069D545 /* CheckInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInfoRequest.swift; sourceTree = "<group>"; };
 		CABAC187232D13B40069D545 /* CheckInfoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInfoDto.swift; sourceTree = "<group>"; };
 		CABAC189232D15A50069D545 /* CheckInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInfoService.swift; sourceTree = "<group>"; };
+		CABAC18B232D20030069D545 /* SessionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRequest.swift; sourceTree = "<group>"; };
+		CABAC18D232D22E00069D545 /* SessionDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionDto.swift; sourceTree = "<group>"; };
 		DEB97A3B232CDFFE00F85CC3 /* VTBHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTBHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB97A40232CDFFE00F85CC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				CABAC177232D0FFA0069D545 /* AuthRequest.swift */,
 				CABAC183232D117D0069D545 /* RequestConfig.swift */,
 				CABAC185232D13070069D545 /* CheckInfoRequest.swift */,
+				CABAC18B232D20030069D545 /* SessionRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -123,7 +128,7 @@
 		CABAC180232D11280069D545 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CABAC172232D0EA80069D545 /* AuthService.swift */,
+				CABAC172232D0EA80069D545 /* AccountService.swift */,
 				CABAC181232D11380069D545 /* RequestSender.swift */,
 				CABAC189232D15A50069D545 /* CheckInfoService.swift */,
 			);
@@ -192,6 +197,7 @@
 				DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */,
 				CABAC17E232D10B80069D545 /* Account.swift */,
 				CABAC187232D13B40069D545 /* CheckInfoDto.swift */,
+				CABAC18D232D22E00069D545 /* SessionDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,9 +320,10 @@
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
-				CABAC173232D0EA80069D545 /* AuthService.swift in Sources */,
+				CABAC173232D0EA80069D545 /* AccountService.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
+				CABAC18E232D22E00069D545 /* SessionDto.swift in Sources */,
 				CABAC188232D13B40069D545 /* CheckInfoDto.swift in Sources */,
 				CABAC17F232D10B80069D545 /* Account.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
@@ -325,6 +332,7 @@
 				CABAC182232D11380069D545 /* RequestSender.swift in Sources */,
 				CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
+				CABAC18C232D20030069D545 /* SessionRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CheckInfoDto: Decodable {
+class CheckInfoDto: Decodable {
     let items: [CheckItemDto]
 }
 
