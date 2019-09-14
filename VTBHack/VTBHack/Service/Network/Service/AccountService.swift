@@ -16,7 +16,7 @@ import Foundation
 //
 class AccountService {
     
-    var sessionId = ""
+    var sessionId = "ac5fb794-22e6-4108-84a0-468c95edbc68"
     
     private let requestSender: RequestSender
     
@@ -31,21 +31,23 @@ class AccountService {
                 switch result {
                 case .success(let model):
                     self?.sessionId = model.data
-                default:
-                    break
+                case .error(let error):
+                    print(error)
                 }
                 completion?(result)
             }
         }
     }
     
-//    func authUser(address: String, completion: VoidBlock) {
-//        let request = AuthUserRequest(login: login, password: password)
-//        requestSender.request(config: request) { result in
-//            DispatchQueue.main.async {
-//                completion?(result)
-//            }
-//        }
-//    }
+    func obtainAccountBalance(address: String, completion: ((Result<AccountBalanceDto>) -> Void)?) {
+        let request = AccountBalanceRequest(address: address)
+        print(request.url)
+        requestSender.request(config: request) { (result) in
+            DispatchQueue.main.async {
+                completion?(result)
+            }
+        }
+    }
+
     
 }

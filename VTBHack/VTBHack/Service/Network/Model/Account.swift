@@ -8,6 +8,12 @@
 
 import Foundation
 
-class AccountDto: Decodable {
-    
+class AccountBalanceDto: Decodable {
+    let data: AccountBalanceDataDto
+}
+
+class AccountBalanceDataDto: Decodable {
+    let currencyCode: Int
+    let address: String
+    let total: Int
 }

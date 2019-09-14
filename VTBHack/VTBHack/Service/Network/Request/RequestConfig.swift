@@ -20,7 +20,8 @@ class RequestConfig<Model> {
     var parser: Parser<Model>
     
     init(
-        baseURL: String = "https://herokutestforrx.herokuapp.com",
+//        baseURL: String = "https://herokutestforrx.herokuapp.com",
+        baseURL: String = "http://89.208.84.235:31080/api/v1",
         url: String = "",
         parameters: Parameters = [:],
         headers: HTTPHeaders = [:],

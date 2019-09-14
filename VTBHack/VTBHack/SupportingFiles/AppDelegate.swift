@@ -28,15 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
         
-        ServiceLayer.shared.accountService.obtainSession { result in
-            switch result {
-            case .error(let error):
-                print(error)
-            case .success(let model):
-                dump(model)
-            }
-        }
-        
         return true
     }
 

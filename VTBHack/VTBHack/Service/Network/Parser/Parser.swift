@@ -15,18 +15,6 @@ class Parser<Model> {
     }
 }
 
-//class AuthParser: Parser<Account> {
-//    override func parse(_ response: DataResponse<Any>) -> Account? {
-//        guard let data = response.data else { return nil }
-//        do {
-//            let model = try JSONDecoder().decode(Cost.self, from: data)
-//            return model
-//        } catch {
-//            return nil
-//        }
-//    }
-//}
-
 class CheckInfoParser: Parser<CheckInfoDto> {
     override func parse(_ response: DataResponse<Any>) -> CheckInfoDto? {
         guard let data = response.data else { return nil }
@@ -44,6 +32,18 @@ class SessionParser: Parser<SessionDto> {
         guard let data = response.data else { return nil }
         do {
             let model = try JSONDecoder().decode(SessionDto.self, from: data)
+            return model
+        } catch {
+            return nil
+        }
+    }
+}
+
+class AccountBalanceParser: Parser<AccountBalanceDto> {
+    override func parse(_ response: DataResponse<Any>) -> AccountBalanceDto? {
+        guard let data = response.data else { return nil }
+        do {
+            let model = try JSONDecoder().decode(AccountBalanceDto.self, from: data)
             return model
         } catch {
             return nil
