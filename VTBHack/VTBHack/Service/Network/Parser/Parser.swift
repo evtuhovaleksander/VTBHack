@@ -50,3 +50,39 @@ class AccountBalanceParser: Parser<AccountBalanceDto> {
         }
     }
 }
+
+class InvoiceParser: Parser<InvoiceDto> {
+    override func parse(_ response: DataResponse<Any>) -> InvoiceDto? {
+        guard let data = response.data else { return nil }
+        do {
+            let model = try JSONDecoder().decode(InvoiceDto.self, from: data)
+            return model
+        } catch {
+            return nil
+        }
+    }
+}
+
+class InvoiceInfoParser: Parser<InvoiceInfoDto> {
+    override func parse(_ response: DataResponse<Any>) -> InvoiceInfoDto? {
+        guard let data = response.data else { return nil }
+        do {
+            let model = try JSONDecoder().decode(InvoiceInfoDto.self, from: data)
+            return model
+        } catch {
+            return nil
+        }
+    }
+}
+
+class AccountAddressParser: Parser<AccountAddressDto> {
+    override func parse(_ response: DataResponse<Any>) -> AccountAddressDto? {
+        guard let data = response.data else { return nil }
+        do {
+            let model = try JSONDecoder().decode(AccountAddressDto.self, from: data)
+            return model
+        } catch {
+            return nil
+        }
+    }
+}

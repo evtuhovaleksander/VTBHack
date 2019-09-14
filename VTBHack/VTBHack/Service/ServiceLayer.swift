@@ -13,14 +13,13 @@ class ServiceLayer {
     
     let requestService: RequestSender
     let accountService: AccountService
-//    let incoiveService: InvoiceService
+    let incoiveService: InvoiceService
     let checkService: CheckInfoService
     
     private init() {
         requestService = RequestSender()
-        
         accountService = AccountService(requestSender: requestService)
-//        incoiveService = InvoiceService(requestSender: requestService)
+        incoiveService = InvoiceService(requestSender: requestService)
         checkService = CheckInfoService(requestSender: requestService)
     }
     
