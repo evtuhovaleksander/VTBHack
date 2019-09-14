@@ -118,15 +118,40 @@
                                     <constraint firstAttribute="bottom" secondItem="MA5-Pm-NJC" secondAttribute="bottom" constant="16" id="sJD-OE-KN7"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-RE-X3g">
+                                <rect key="frame" x="0.0" y="340" width="414" height="60"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qt-dZ-e9L">
+                                        <rect key="frame" x="349" y="14.5" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Видимость устройства" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmg-bw-XTI">
+                                        <rect key="frame" x="16" y="17.5" width="239" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1qt-dZ-e9L" firstAttribute="centerY" secondItem="Jxw-RE-X3g" secondAttribute="centerY" id="V0f-yb-xGN"/>
+                                    <constraint firstAttribute="trailing" secondItem="1qt-dZ-e9L" secondAttribute="trailing" constant="16" id="X9L-YB-Mni"/>
+                                    <constraint firstAttribute="height" constant="60" id="XL3-Kv-2o1"/>
+                                    <constraint firstItem="mmg-bw-XTI" firstAttribute="centerY" secondItem="Jxw-RE-X3g" secondAttribute="centerY" id="kpP-JF-JYb"/>
+                                    <constraint firstItem="mmg-bw-XTI" firstAttribute="leading" secondItem="Jxw-RE-X3g" secondAttribute="leading" constant="16" id="rVp-0D-fd3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="fi8-0V-A0p" firstAttribute="trailing" secondItem="Jxw-RE-X3g" secondAttribute="trailing" id="Ews-Pd-i2k"/>
+                            <constraint firstItem="Jxw-RE-X3g" firstAttribute="leading" secondItem="fi8-0V-A0p" secondAttribute="leading" id="LGc-fg-SjW"/>
                             <constraint firstItem="fi8-0V-A0p" firstAttribute="trailing" secondItem="Fw1-mi-QUo" secondAttribute="trailing" id="MMJ-tb-cqU"/>
                             <constraint firstItem="WYS-8B-5mk" firstAttribute="leading" secondItem="fi8-0V-A0p" secondAttribute="leading" id="Pjc-3i-ExA"/>
                             <constraint firstItem="Fw1-mi-QUo" firstAttribute="top" secondItem="24o-ZK-Zml" secondAttribute="top" id="feZ-ix-5MZ"/>
                             <constraint firstItem="fi8-0V-A0p" firstAttribute="trailing" secondItem="WYS-8B-5mk" secondAttribute="trailing" id="gl6-jA-h3P"/>
                             <constraint firstItem="WYS-8B-5mk" firstAttribute="top" secondItem="Fw1-mi-QUo" secondAttribute="bottom" id="mk2-Ek-XS8"/>
                             <constraint firstItem="Fw1-mi-QUo" firstAttribute="leading" secondItem="fi8-0V-A0p" secondAttribute="leading" id="pnu-qW-LGM"/>
+                            <constraint firstItem="Jxw-RE-X3g" firstAttribute="top" secondItem="WYS-8B-5mk" secondAttribute="bottom" constant="10" id="rPf-OY-dLK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fi8-0V-A0p"/>
                     </view>

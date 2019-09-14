@@ -16,6 +16,7 @@ class ServiceLayer {
     let incoiveService: InvoiceService
     let checkService: CheckInfoService
     let infoService: InfoService
+    var multiPeerService: MultiPeerService?
     
     private init() {
         requestService = RequestSender()

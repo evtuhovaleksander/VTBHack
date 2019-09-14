@@ -27,7 +27,7 @@ class AuthController: UIViewController {
         view.backgroundColor = UIColor.Color.authDarkBlueBackground
         authButton.setTitle("Войти", for: .normal)
         identifierField.text = "79999999999"
-        auth(self)
+        //auth(self)
     }
     
     func showError(_ error: String) {
@@ -73,6 +73,7 @@ class AuthController: UIViewController {
                 dump(model)
                 ServiceLayer.shared.infoService.accountInfo = model
                 ServiceLayer.shared.infoService.identifier = self.identifierField.text ?? ""
+                ServiceLayer.shared.multiPeerService = MultiPeerService()
                 self.performSegue(withIdentifier: "auth", sender: nil)
             }
         }

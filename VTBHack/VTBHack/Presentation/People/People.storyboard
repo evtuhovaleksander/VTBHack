@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="38c-GW-GfH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3Ty-jD-fjm">
+            <objects>
+                <navigationController id="38c-GW-GfH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MaY-Ij-jXD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1Jp-FX-FSv" kind="relationship" relationship="rootViewController" id="VWk-LM-8QA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGV-wa-maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="118"/>
+        </scene>
+        <!--People Picker View Controller-->
+        <scene sceneID="biQ-W5-NF6">
+            <objects>
+                <viewController id="1Jp-FX-FSv" customClass="PeoplePickerViewController" customModule="VTBHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3LX-tV-K5D">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SuH-RQ-en8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="yJw-GC-ukj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04e-Z3-lSv">
+                                <rect key="frame" x="12" y="818" width="390" height="52"/>
+                                <color key="backgroundColor" red="0.0" green="0.73333333329999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="vdG-Gp-m89"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="action:" destination="1Jp-FX-FSv" eventType="touchUpInside" id="t3i-fm-owY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SuH-RQ-en8" firstAttribute="top" secondItem="Rgu-ag-WP7" secondAttribute="top" id="3Wg-Zj-oXp"/>
+                            <constraint firstItem="SuH-RQ-en8" firstAttribute="leading" secondItem="Rgu-ag-WP7" secondAttribute="leading" id="6Kb-nE-AS6"/>
+                            <constraint firstItem="04e-Z3-lSv" firstAttribute="bottom" secondItem="Rgu-ag-WP7" secondAttribute="bottom" constant="8" id="UrU-nZ-hUo"/>
+                            <constraint firstItem="Rgu-ag-WP7" firstAttribute="trailing" secondItem="04e-Z3-lSv" secondAttribute="trailing" constant="12" id="he9-1i-ekA"/>
+                            <constraint firstAttribute="bottom" secondItem="SuH-RQ-en8" secondAttribute="bottom" id="oN5-3v-6zQ"/>
+                            <constraint firstItem="04e-Z3-lSv" firstAttribute="leading" secondItem="Rgu-ag-WP7" secondAttribute="leading" constant="12" id="q84-if-rzZ"/>
+                            <constraint firstItem="Rgu-ag-WP7" firstAttribute="trailing" secondItem="SuH-RQ-en8" secondAttribute="trailing" id="rg3-xw-6mB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rgu-ag-WP7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="50C-LQ-d6g"/>
+                    <connections>
+                        <outlet property="actionButton" destination="04e-Z3-lSv" id="ItR-1N-m92"/>
+                        <outlet property="tableView" destination="SuH-RQ-en8" id="uni-sh-o6d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3W0-Ah-W33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
