@@ -29,6 +29,8 @@
 		DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D65232D509900E8F877 /* WhiteButton.swift */; };
 		DE534D68232D511400E8F877 /* WhitetextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D67232D511400E8F877 /* WhitetextField.swift */; };
 		DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D69232D535B00E8F877 /* Hasher.swift */; };
+		DEAF87E0232D5F8800707350 /* InfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF87DF232D5F8800707350 /* InfoService.swift */; };
+		DEAF87E2232D60AE00707350 /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAF87E1232D60AE00707350 /* Groups.storyboard */; };
 		DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */; };
 		DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A40232CDFFE00F85CC3 /* ViewController.swift */; };
 		DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A42232CDFFE00F85CC3 /* Main.storyboard */; };
@@ -73,6 +75,8 @@
 		DE534D65232D509900E8F877 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		DE534D67232D511400E8F877 /* WhitetextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitetextField.swift; sourceTree = "<group>"; };
 		DE534D69232D535B00E8F877 /* Hasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hasher.swift; sourceTree = "<group>"; };
+		DEAF87DF232D5F8800707350 /* InfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoService.swift; sourceTree = "<group>"; };
+		DEAF87E1232D60AE00707350 /* Groups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
 		DEB97A3B232CDFFE00F85CC3 /* VTBHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTBHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB97A40232CDFFE00F85CC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				CABAC172232D0EA80069D545 /* AccountService.swift */,
 				CABAC181232D11380069D545 /* RequestSender.swift */,
 				CABAC189232D15A50069D545 /* CheckInfoService.swift */,
+				DEAF87DF232D5F8800707350 /* InfoService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				DE534D63232D4E7B00E8F877 /* AuthController.swift */,
 				DE534D65232D509900E8F877 /* WhiteButton.swift */,
 				DE534D67232D511400E8F877 /* WhitetextField.swift */,
+				DEAF87E1232D60AE00707350 /* Groups.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
 				DE534D62232D4DE600E8F877 /* AuthStoryboard.storyboard in Resources */,
 				DE534D5D232D4C0500E8F877 /* MainView.xib in Resources */,
+				DEAF87E2232D60AE00707350 /* Groups.storyboard in Resources */,
 				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
 				DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */,
 				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
@@ -425,6 +432,7 @@
 				DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */,
 				DE534D60232D4C0500E8F877 /* MainView.swift in Sources */,
 				DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */,
+				DEAF87E0232D5F8800707350 /* InfoService.swift in Sources */,
 				DEB97A83232D394900F85CC3 /* UIImage+VTBImage.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
 				DE534D64232D4E7B00E8F877 /* AuthController.swift in Sources */,
