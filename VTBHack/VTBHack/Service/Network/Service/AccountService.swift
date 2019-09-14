@@ -10,7 +10,7 @@ import Foundation
 
 class AccountService {
     
-    var sessionId = "ac5fb794-22e6-4108-84a0-468c95edbc68"
+    var sessionId = ""
     
     private let requestSender: RequestSender
     
