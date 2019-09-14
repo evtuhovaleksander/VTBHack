@@ -24,6 +24,11 @@
 		DE534D5E232D4C0500E8F877 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D59232D4C0500E8F877 /* MainView.swift */; };
 		DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE534D5B232D4C0500E8F877 /* MainView.xib */; };
 		DE534D60232D4C0500E8F877 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D5C232D4C0500E8F877 /* MainView.swift */; };
+		DE534D62232D4DE600E8F877 /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE534D61232D4DE600E8F877 /* AuthStoryboard.storyboard */; };
+		DE534D64232D4E7B00E8F877 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D63232D4E7B00E8F877 /* AuthController.swift */; };
+		DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D65232D509900E8F877 /* WhiteButton.swift */; };
+		DE534D68232D511400E8F877 /* WhitetextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D67232D511400E8F877 /* WhitetextField.swift */; };
+		DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D69232D535B00E8F877 /* Hasher.swift */; };
 		DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */; };
 		DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A40232CDFFE00F85CC3 /* ViewController.swift */; };
 		DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A42232CDFFE00F85CC3 /* Main.storyboard */; };
@@ -63,6 +68,11 @@
 		DE534D59232D4C0500E8F877 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainView.swift; path = Main/MainView.swift; sourceTree = "<group>"; };
 		DE534D5B232D4C0500E8F877 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		DE534D5C232D4C0500E8F877 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		DE534D61232D4DE600E8F877 /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
+		DE534D63232D4E7B00E8F877 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		DE534D65232D509900E8F877 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		DE534D67232D511400E8F877 /* WhitetextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitetextField.swift; sourceTree = "<group>"; };
+		DE534D69232D535B00E8F877 /* Hasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hasher.swift; sourceTree = "<group>"; };
 		DEB97A3B232CDFFE00F85CC3 /* VTBHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTBHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB97A40232CDFFE00F85CC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +221,7 @@
 				DEB97A45232CDFFF00F85CC3 /* Assets.xcassets */,
 				DEB97A47232CDFFF00F85CC3 /* LaunchScreen.storyboard */,
 				DEB97A4A232CDFFF00F85CC3 /* Info.plist */,
+				DE534D61232D4DE600E8F877 /* AuthStoryboard.storyboard */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				DEB97A58232CECF400F85CC3 /* Types.swift */,
+				DE534D69232D535B00E8F877 /* Hasher.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -252,6 +264,9 @@
 				DEB97A64232D116D00F85CC3 /* Profile */,
 				DEB97A7A232D256C00F85CC3 /* BlueNavigationController.swift */,
 				DEB97A7C232D28E100F85CC3 /* BlueButton.swift */,
+				DE534D63232D4E7B00E8F877 /* AuthController.swift */,
+				DE534D65232D509900E8F877 /* WhiteButton.swift */,
+				DE534D67232D511400E8F877 /* WhitetextField.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -348,6 +363,7 @@
 				DEB97A49232CDFFF00F85CC3 /* LaunchScreen.storyboard in Resources */,
 				DEB97A7F232D31D100F85CC3 /* NeedAuthView.xib in Resources */,
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
+				DE534D62232D4DE600E8F877 /* AuthStoryboard.storyboard in Resources */,
 				DE534D5D232D4C0500E8F877 /* MainView.xib in Resources */,
 				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
 				DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */,
@@ -404,10 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE534D68232D511400E8F877 /* WhitetextField.swift in Sources */,
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
+				DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */,
 				DE534D60232D4C0500E8F877 /* MainView.swift in Sources */,
+				DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */,
 				DEB97A83232D394900F85CC3 /* UIImage+VTBImage.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
+				DE534D64232D4E7B00E8F877 /* AuthController.swift in Sources */,
 				DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */,
 				DEB97A7B232D256C00F85CC3 /* BlueNavigationController.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
