@@ -8,12 +8,6 @@
 
 import Foundation
 
-//protocol AuthServiceProtocol {
-//    
-//    typealias AuthUserCompletion = ((Result<AuthResult>) -> Void)?
-//    func authUser(login: String, password: String, completion: AuthUserCompletion)
-//}
-//
 class AccountService {
     
     var sessionId = "ac5fb794-22e6-4108-84a0-468c95edbc68"
@@ -39,9 +33,17 @@ class AccountService {
         }
     }
     
+    func obtainAccountAddress(identifier: String, completion: ((Result<AccountAddressDto>) -> Void)?) {
+        let request = AccountAddressRequest(identifier: identifier)
+        requestSender.request(config: request) { (result) in
+            DispatchQueue.main.async {
+                completion?(result)
+            }
+        }
+    }
+    
     func obtainAccountBalance(address: String, completion: ((Result<AccountBalanceDto>) -> Void)?) {
         let request = AccountBalanceRequest(address: address)
-        print(request.url)
         requestSender.request(config: request) { (result) in
             DispatchQueue.main.async {
                 completion?(result)

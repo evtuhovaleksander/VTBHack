@@ -11,7 +11,7 @@
 		CABAC173232D0EA80069D545 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AccountService.swift */; };
 		CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC177232D0FFA0069D545 /* AuthRequest.swift */; };
 		CABAC17D232D10930069D545 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17C232D10930069D545 /* Parser.swift */; };
-		CABAC17F232D10B80069D545 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17E232D10B80069D545 /* Account.swift */; };
+		CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17E232D10B80069D545 /* AccountDto.swift */; };
 		CABAC182232D11380069D545 /* RequestSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC181232D11380069D545 /* RequestSender.swift */; };
 		CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC183232D117D0069D545 /* RequestConfig.swift */; };
 		CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC185232D13070069D545 /* CheckInfoRequest.swift */; };
@@ -31,6 +31,13 @@
 		DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE534D69232D535B00E8F877 /* Hasher.swift */; };
 		DEAF87E0232D5F8800707350 /* InfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAF87DF232D5F8800707350 /* InfoService.swift */; };
 		DEAF87E2232D60AE00707350 /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEAF87E1232D60AE00707350 /* Groups.storyboard */; };
+		CABAC192232D413D0069D545 /* InvoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC191232D413D0069D545 /* InvoiceService.swift */; };
+		CABAC194232D44090069D545 /* InvoiceDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC193232D44090069D545 /* InvoiceDto.swift */; };
+		CABAC196232D45790069D545 /* InvoiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC195232D45790069D545 /* InvoiceRequest.swift */; };
+		CABAC198232D50470069D545 /* InvoiceInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC197232D50470069D545 /* InvoiceInfoRequest.swift */; };
+		CABAC19A232D508F0069D545 /* InvoiceInfoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC199232D508F0069D545 /* InvoiceInfoDto.swift */; };
+		CABAC19C232D5F0E0069D545 /* AccountAddressRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC19B232D5F0E0069D545 /* AccountAddressRequest.swift */; };
+		CABAC19E232D5FCA0069D545 /* AccountAddressDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC19D232D5FCA0069D545 /* AccountAddressDto.swift */; };
 		DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */; };
 		DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A40232CDFFE00F85CC3 /* ViewController.swift */; };
 		DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A42232CDFFE00F85CC3 /* Main.storyboard */; };
@@ -57,7 +64,7 @@
 		CABAC172232D0EA80069D545 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		CABAC177232D0FFA0069D545 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		CABAC17C232D10930069D545 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		CABAC17E232D10B80069D545 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		CABAC17E232D10B80069D545 /* AccountDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDto.swift; sourceTree = "<group>"; };
 		CABAC181232D11380069D545 /* RequestSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSender.swift; sourceTree = "<group>"; };
 		CABAC183232D117D0069D545 /* RequestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfig.swift; sourceTree = "<group>"; };
 		CABAC185232D13070069D545 /* CheckInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInfoRequest.swift; sourceTree = "<group>"; };
@@ -77,6 +84,13 @@
 		DE534D69232D535B00E8F877 /* Hasher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hasher.swift; sourceTree = "<group>"; };
 		DEAF87DF232D5F8800707350 /* InfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoService.swift; sourceTree = "<group>"; };
 		DEAF87E1232D60AE00707350 /* Groups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
+		CABAC191232D413D0069D545 /* InvoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceService.swift; sourceTree = "<group>"; };
+		CABAC193232D44090069D545 /* InvoiceDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDto.swift; sourceTree = "<group>"; };
+		CABAC195232D45790069D545 /* InvoiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRequest.swift; sourceTree = "<group>"; };
+		CABAC197232D50470069D545 /* InvoiceInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceInfoRequest.swift; sourceTree = "<group>"; };
+		CABAC199232D508F0069D545 /* InvoiceInfoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceInfoDto.swift; sourceTree = "<group>"; };
+		CABAC19B232D5F0E0069D545 /* AccountAddressRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAddressRequest.swift; sourceTree = "<group>"; };
+		CABAC19D232D5FCA0069D545 /* AccountAddressDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAddressDto.swift; sourceTree = "<group>"; };
 		DEB97A3B232CDFFE00F85CC3 /* VTBHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTBHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB97A3E232CDFFE00F85CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB97A40232CDFFE00F85CC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +170,9 @@
 				CABAC185232D13070069D545 /* CheckInfoRequest.swift */,
 				CABAC18B232D20030069D545 /* SessionRequest.swift */,
 				CABAC18F232D2CB30069D545 /* AccountBalanceDto.swift */,
+				CABAC195232D45790069D545 /* InvoiceRequest.swift */,
+				CABAC197232D50470069D545 /* InvoiceInfoRequest.swift */,
+				CABAC19B232D5F0E0069D545 /* AccountAddressRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -175,6 +192,7 @@
 				CABAC181232D11380069D545 /* RequestSender.swift */,
 				CABAC189232D15A50069D545 /* CheckInfoService.swift */,
 				DEAF87DF232D5F8800707350 /* InfoService.swift */,
+				CABAC191232D413D0069D545 /* InvoiceService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -251,9 +269,12 @@
 			isa = PBXGroup;
 			children = (
 				DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */,
-				CABAC17E232D10B80069D545 /* Account.swift */,
+				CABAC17E232D10B80069D545 /* AccountDto.swift */,
 				CABAC187232D13B40069D545 /* CheckInfoDto.swift */,
 				CABAC18D232D22E00069D545 /* SessionDto.swift */,
+				CABAC193232D44090069D545 /* InvoiceDto.swift */,
+				CABAC199232D508F0069D545 /* InvoiceInfoDto.swift */,
+				CABAC19D232D5FCA0069D545 /* AccountAddressDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -428,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE534D68232D511400E8F877 /* WhitetextField.swift in Sources */,
+				CABAC19C232D5F0E0069D545 /* AccountAddressRequest.swift in Sources */,
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
 				DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */,
 				DE534D60232D4C0500E8F877 /* MainView.swift in Sources */,
@@ -439,21 +461,28 @@
 				DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */,
 				DEB97A7B232D256C00F85CC3 /* BlueNavigationController.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
+				CABAC19A232D508F0069D545 /* InvoiceInfoDto.swift in Sources */,
 				CABAC173232D0EA80069D545 /* AccountService.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
+				CABAC19E232D5FCA0069D545 /* AccountAddressDto.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
 				DEB97A7D232D28E100F85CC3 /* BlueButton.swift in Sources */,
 				CABAC18E232D22E00069D545 /* SessionDto.swift in Sources */,
 				CABAC188232D13B40069D545 /* CheckInfoDto.swift in Sources */,
 				CABAC17F232D10B80069D545 /* Account.swift in Sources */,
 				DE534D5E232D4C0500E8F877 /* MainView.swift in Sources */,
+				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
+				CABAC196232D45790069D545 /* InvoiceRequest.swift in Sources */,
 				DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */,
+				CABAC198232D50470069D545 /* InvoiceInfoRequest.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
 				DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,
 				CABAC18A232D15A50069D545 /* CheckInfoService.swift in Sources */,
+				CABAC194232D44090069D545 /* InvoiceDto.swift in Sources */,
 				CABAC182232D11380069D545 /* RequestSender.swift in Sources */,
+				CABAC192232D413D0069D545 /* InvoiceService.swift in Sources */,
 				CABAC190232D2CB30069D545 /* AccountBalanceDto.swift in Sources */,
 				CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
