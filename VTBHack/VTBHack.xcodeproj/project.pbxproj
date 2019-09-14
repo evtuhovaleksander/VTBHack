@@ -17,6 +17,10 @@
 		DEB97A56232CEC3300F85CC3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A55232CEC3300F85CC3 /* NetworkService.swift */; };
 		DEB97A59232CECF400F85CC3 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A58232CECF400F85CC3 /* Types.swift */; };
 		DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */; };
+		DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A5E232D068D00F85CC3 /* ProfileViewController.swift */; };
+		DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEB97A62232D112000F85CC3 /* Profile.storyboard */; };
+		DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */; };
+		DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		DEB97A55232CEC3300F85CC3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DEB97A58232CECF400F85CC3 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		DEB97A5A232D003B00F85CC3 /* QRAddressDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRAddressDto.swift; sourceTree = "<group>"; };
+		DEB97A5E232D068D00F85CC3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DEB97A62232D112000F85CC3 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LoadFromNib.swift"; sourceTree = "<group>"; };
+		DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+VTBColor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,7 @@
 		DEB97A3D232CDFFE00F85CC3 /* VTBHack */ = {
 			isa = PBXGroup;
 			children = (
+				DEB97A5D232D066C00F85CC3 /* Presentation */,
 				DEB97A51232CEBE000F85CC3 /* BuisinessLogic */,
 				DEB97A50232CEBC700F85CC3 /* SupportingFiles */,
 			);
@@ -140,6 +149,41 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DEB97A5D232D066C00F85CC3 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DEB97A69232D12AB00F85CC3 /* TopNotification */,
+				DEB97A65232D125600F85CC3 /* Helper */,
+				DEB97A64232D116D00F85CC3 /* Profile */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DEB97A64232D116D00F85CC3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DEB97A5E232D068D00F85CC3 /* ProfileViewController.swift */,
+				DEB97A62232D112000F85CC3 /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DEB97A65232D125600F85CC3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */,
+				DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		DEB97A69232D12AB00F85CC3 /* TopNotification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TopNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +218,7 @@
 				TargetAttributes = {
 					DEB97A3A232CDFFE00F85CC3 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -202,6 +247,7 @@
 			files = (
 				DEB97A49232CDFFF00F85CC3 /* LaunchScreen.storyboard in Resources */,
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
+				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
 				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +303,11 @@
 			files = (
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
+				DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
 				DEB97A56232CEC3300F85CC3 /* NetworkService.swift in Sources */,
+				DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */,
+				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
 			);
@@ -407,14 +456,17 @@
 			baseConfigurationReference = 62958855CA6EBB12BBDA1C58 /* Pods-VTBHack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X29ZAV8TY6;
 				INFOPLIST_FILE = "$(SRCROOT)/VTBHack/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RxProject.VTBHack;
+				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -425,13 +477,15 @@
 			baseConfigurationReference = ADDAF2201AE63377F42FEEC1 /* Pods-VTBHack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X29ZAV8TY6;
 				INFOPLIST_FILE = "$(SRCROOT)/VTBHack/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RxProject.VTBHack;
+				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
