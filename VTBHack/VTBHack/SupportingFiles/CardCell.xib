@@ -28,10 +28,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-Sp-tLT">
+                                <rect key="frame" x="0.0" y="0.0" width="324" height="164"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="AfA-Sp-tLT" secondAttribute="bottom" id="9kW-9e-p3e"/>
+                            <constraint firstItem="AfA-Sp-tLT" firstAttribute="leading" secondItem="RyJ-Qm-jcH" secondAttribute="leading" id="A9g-Uc-31I"/>
+                            <constraint firstAttribute="trailing" secondItem="AfA-Sp-tLT" secondAttribute="trailing" id="Dpe-oQ-VNl"/>
                             <constraint firstItem="2fz-N0-UB4" firstAttribute="top" secondItem="RyJ-Qm-jcH" secondAttribute="top" constant="16" id="JKz-ue-zb9"/>
+                            <constraint firstItem="AfA-Sp-tLT" firstAttribute="top" secondItem="RyJ-Qm-jcH" secondAttribute="top" id="SpT-hZ-szc"/>
                             <constraint firstItem="2fz-N0-UB4" firstAttribute="leading" secondItem="RyJ-Qm-jcH" secondAttribute="leading" constant="16" id="pFR-XH-odi"/>
                         </constraints>
                     </view>
@@ -46,6 +53,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="356" height="164"/>
             <connections>
+                <outlet property="imageView" destination="AfA-Sp-tLT" id="Pia-ag-flX"/>
                 <outlet property="nameLabel" destination="2fz-N0-UB4" id="So5-Sn-XaI"/>
                 <outlet property="view" destination="RyJ-Qm-jcH" id="Xfh-Ud-pqT"/>
             </connections>

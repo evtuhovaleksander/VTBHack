@@ -14,9 +14,9 @@ struct Card {
     
     static func getData() -> [Card] {
         return [
-            Card(color: .blue, name: "ВТБ"),
-            Card(color: .green, name: "Сбербанк"),
-            Card(color: UIColor.yellow.withAlphaComponent(0.9), name: "Tinkoff")
+            Card(color: .blue, name: "bitmap2"),
+            Card(color: .green, name: "bitmap1"),
+            Card(color: UIColor.yellow.withAlphaComponent(0.9), name: "bitmap1")
         ]
     }
 }
@@ -36,29 +36,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupCards()
         setupSecondStack()
+        view.backgroundColor = UIColor(hex: "f8f8f8")
         
         // collectionView setup
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "CardCell", bundle: nil), forCellWithReuseIdentifier: cellId)
         collectionView.reloadData()
-        
-        // pageControl setup
-//        pageControl.numberOfPages = cards.count
-//        pageControl.tintColor = .red
-//        pageControl.pageIndicatorTintColor = .blue
-//        pageControl.currentPage = 0
-//        pageControl.currentPageIndicatorTintColor = .red
+        collectionView.backgroundColor = UIColor(hex: "f8f8f8")
     }
 
     func setupCards() {
         let firstCard: MainView = MainView.loadFromNib()
-        firstCard.cardImage.image = UIImage(named: "card")
+        firstCard.cardImage.image = UIImage(named: "group2")
         firstCard.cardName.text = "Счет ВТБ"
         firstCard.moneyAmount.text = "31 600, 00 ₽"
         stackView.addArrangedSubview(firstCard)
+        
         let secondCard: MainView = MainView.loadFromNib()
-        secondCard.cardImage.image = UIImage(named: "card")
+        secondCard.cardImage.image = UIImage(named: "group")
         secondCard.cardName.text = "Счет Tinkoff Black"
         secondCard.moneyAmount.text = "6 100, 00 ₽"
         secondCard.separator.isHidden = true
@@ -66,17 +62,35 @@ class ViewController: UIViewController {
     }
     
     func setupSecondStack() {
-        let first: MainView = MainView.loadFromNib()
-        first.cardImage.image = UIImage(named: "truecost")
-        first.cardName.text = "True Cost"
-        first.moneyAmount.text = ""
+        let first: SugestsView = SugestsView.loadFromNib()
+        first.mainView.layer.cornerRadius = 9
+        first.mainView.clipsToBounds = true
+        first.backgroundColor = UIColor(hex: "f8f8f8")
+        first.leftImageView.image = UIImage(named: "lenta")
+        first.rightImage.image = UIImage(named: "check1")
+        first.topLabel.text = "Cеть магазинов Лента"
+        first.bottomLabel.text = "7% на все покупки"
         secondStackView.addArrangedSubview(first)
-        let second: MainView = MainView.loadFromNib()
-        second.cardImage.image = UIImage(named: "hawksworth")
-        second.cardName.text = "Hawksworth"
-        second.moneyAmount.text = ""
-        second.separator.isHidden = true
+        
+        let second: SugestsView = SugestsView.loadFromNib()
+        second.mainView.layer.cornerRadius = 9
+        second.mainView.clipsToBounds = true
+        second.backgroundColor = UIColor(hex: "f8f8f8")
+        second.leftImageView.image = UIImage(named: "karusel")
+        second.rightImage.image = UIImage(named: "check2")
+        second.topLabel.text = "Cеть магазинов Карусель"
+        second.bottomLabel.text = "10% на первую покупку"
         secondStackView.addArrangedSubview(second)
+        
+        let third: SugestsView = SugestsView.loadFromNib()
+        third.mainView.layer.cornerRadius = 9
+        third.mainView.clipsToBounds = true
+        third.backgroundColor = UIColor(hex: "f8f8f8")
+        third.leftImageView.image = UIImage(named: "goods")
+        third.rightImage.image = UIImage(named: "check2")
+        third.topLabel.text = "Goods.ru"
+        third.bottomLabel.text = "13% на первую покупку"
+        secondStackView.addArrangedSubview(third)
     }
 
 }
@@ -89,7 +103,7 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cardCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CardCell
-        cardCell.configure(color: cards[indexPath.row].color, name: cards[indexPath.row].name)
+        cardCell.configure(image: UIImage(named: cards[indexPath.row].name)!)
         return cardCell
     }
 }
@@ -112,7 +126,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 6, bottom: 0, right: 6)
+        return UIEdgeInsets(top: 0, left: -8, bottom: 0, right: -8)
     }
 }
 

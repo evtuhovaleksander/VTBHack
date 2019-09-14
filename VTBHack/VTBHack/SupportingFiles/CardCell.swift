@@ -12,6 +12,7 @@ class CardCell: UICollectionViewCell {
 
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,9 +20,8 @@ class CardCell: UICollectionViewCell {
         view.clipsToBounds = true
     }
     
-    func configure(color: UIColor, name: String) {
-        view.backgroundColor = color
-        nameLabel.text = name
+    func configure(image: UIImage) {
+        imageView.image = image
     }
 
 }
