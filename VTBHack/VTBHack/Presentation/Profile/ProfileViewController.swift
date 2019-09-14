@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CryptoSwift
 
 class ProfileViewController: UIViewController {
     @IBOutlet var headerView: UIView!
@@ -56,6 +57,18 @@ class ProfileViewController: UIViewController {
         
         statusLabel.text = "Доступен"
         statusLabel.textColor = UIColor.Color.statusGreen
+        
+        guard
+            let identifier = ServiceLayer.shared.infoService.identifier,
+            let address = ServiceLayer.shared.infoService.accountAdress,
+            let accountModel = ServiceLayer.shared.infoService.accountInfo
+            else { return }
+        keepBalanceLabel.text = "\(accountModel.data.total) P"
+        identifierLabel.text = """
+        \(accountModel.data.address)
+        \(identifier.sha256())
+        """
+        phoneLabel.text = identifier
     }
     
     @IBAction func actionButton(_ sender: Any) {

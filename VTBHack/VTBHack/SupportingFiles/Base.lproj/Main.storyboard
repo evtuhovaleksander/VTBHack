@@ -94,7 +94,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="tab1" id="e63-G2-fK5">
+                        <color key="badgeColor" red="1" green="0.12136" blue="0.033898758559999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="Главная" id="KFV-zt-qne"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="moneyAmount" destination="Ey3-23-u4e" id="I28-Or-MY9"/>
                         <outlet property="stackView" destination="8Gb-XU-FDc" id="pfh-7Y-cMP"/>
@@ -123,4 +127,7 @@
             <point key="canvasLocation" x="79.710144927536234" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tab1" width="53" height="48"/>
+    </resources>
 </document>

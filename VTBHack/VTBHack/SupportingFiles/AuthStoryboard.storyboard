@@ -68,6 +68,7 @@
                         <outlet property="authButton" destination="BT6-1w-7fn" id="isn-nG-kgd"/>
                         <outlet property="identifierField" destination="U7x-y2-0Es" id="CS3-Th-UDR"/>
                         <outlet property="passwordField" destination="pZB-d9-ZOw" id="atl-BM-QQE"/>
+                        <segue destination="uRU-aH-52u" kind="presentation" identifier="auth" id="ynK-kJ-WC9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uCm-Xn-vS8" userLabel="First Responder" sceneMemberID="firstResponder"/>

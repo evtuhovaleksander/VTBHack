@@ -9,5 +9,7 @@
 import Foundation
 
 class InfoService {
-    var accountIdentifier: String?
+    var accountAdress: String?
+    var accountInfo: AccountBalanceDto?
+    var identifier: String?
 }

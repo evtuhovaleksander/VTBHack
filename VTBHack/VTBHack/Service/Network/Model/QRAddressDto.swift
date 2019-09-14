@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct QRAddressDto: Decodable {
+struct QRAddressDto: Codable {
     let address: String
 }

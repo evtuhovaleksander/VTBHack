@@ -27,37 +27,59 @@ class AuthController: UIViewController {
         view.backgroundColor = UIColor.Color.authDarkBlueBackground
         authButton.setTitle("Войти", for: .normal)
         identifierField.text = "79999999999"
+        auth(self)
     }
     
-    @IBAction func auth(_ sender: Any) {
-        guard let identifier = identifierField.text else { return }
+    func showError(_ error: String) {
+        let alert = UIAlertController(title: "Ошибка", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
+    func getFSID() {
         ServiceLayer.shared.accountService.obtainSession { result in
             switch result {
             case .error(let error):
                 print(error)
-                let alert = UIAlertController(title: "Ошибка", message: error, preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                
-                self.present(alert, animated: true)
+                self.showError(error)
             case .success(let model):
                 dump(model)
-                
-                let address = identifier.sha256()
-                ServiceLayer.shared.accountService.obtainAccountBalance(address: address) { result in
-                    switch result {
-                    case .error(let error):
-                        print(error)
-                        let alert = UIAlertController(title: "Ошибка", message: error, preferredStyle: .alert)
-                        
-                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        
-                        self.present(alert, animated: true)
-                    case .success(let model):
-                        dump(model)
-                    }
-                }
+                self.getAddress()
             }
         }
+    }
+        
+    func getAddress() {
+        guard let identifier = identifierField.text else { return }
+        let identifierSha = identifier.sha256()
+        ServiceLayer.shared.accountService.obtainAccountAddress(identifier: identifierSha) { result in
+            switch result {
+            case .error(let error):
+                self.showError(error)
+            case .success(let model):
+                dump(model)
+                ServiceLayer.shared.infoService.accountAdress = model.data.address
+                self.getBalance(address: model.data.address)
+            }
+        }
+    }
+    
+    func getBalance(address: String) {
+        ServiceLayer.shared.accountService.obtainAccountBalance(address: address) { result in
+            switch result {
+            case .error(let error):
+                self.showError(error)
+            case .success(let model):
+                dump(model)
+                ServiceLayer.shared.infoService.accountInfo = model
+                ServiceLayer.shared.infoService.identifier = self.identifierField.text ?? ""
+                self.performSegue(withIdentifier: "auth", sender: nil)
+            }
+        }
+    }
+    
+    
+    @IBAction func auth(_ sender: Any) {
+        getFSID()
     }
 }
