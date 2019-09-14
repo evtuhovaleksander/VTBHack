@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		083EC13FACE63EA2621C8EC9 /* Pods_VTBHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */; };
+		30F9A4DD232D2A320043082C /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4DC232D2A310043082C /* MainView.xib */; };
+		30F9A4E0232D2DF30043082C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9A4DF232D2DF30043082C /* MainView.swift */; };
 		CABAC173232D0EA80069D545 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AuthService.swift */; };
 		CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC177232D0FFA0069D545 /* AuthRequest.swift */; };
 		CABAC17D232D10930069D545 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17C232D10930069D545 /* Parser.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTBHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F9A4DC232D2A310043082C /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		30F9A4DF232D2DF30043082C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		62958855CA6EBB12BBDA1C58 /* Pods-VTBHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.debug.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDAF2201AE63377F42FEEC1 /* Pods-VTBHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.release.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.release.xcconfig"; sourceTree = "<group>"; };
 		CABAC172232D0EA80069D545 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30F9A4DE232D2DDC0043082C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				30F9A4DF232D2DF30043082C /* MainView.swift */,
+				30F9A4DC232D2A310043082C /* MainView.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		3CD776057210B57BD79F4727 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 		DEB97A5D232D066C00F85CC3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				30F9A4DE232D2DDC0043082C /* Main */,
 				DEB97A69232D12AB00F85CC3 /* TopNotification */,
 				DEB97A65232D125600F85CC3 /* Helper */,
 				DEB97A64232D116D00F85CC3 /* Profile */,
@@ -303,6 +317,7 @@
 			files = (
 				DEB97A49232CDFFF00F85CC3 /* LaunchScreen.storyboard in Resources */,
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
+				30F9A4DD232D2A320043082C /* MainView.xib in Resources */,
 				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
 				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
 			);
@@ -358,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
+				30F9A4E0232D2DF30043082C /* MainView.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
 				DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
@@ -367,7 +383,6 @@
 				CABAC188232D13B40069D545 /* CheckInfoDto.swift in Sources */,
 				CABAC17F232D10B80069D545 /* Account.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
-				DEB97A56232CEC3300F85CC3 /* NetworkService.swift in Sources */,
 				DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,

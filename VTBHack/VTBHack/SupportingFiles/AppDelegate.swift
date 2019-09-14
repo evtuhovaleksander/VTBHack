@@ -18,15 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
-        let rawQRCode = "t=20190913T130200&s=190.00&fn=9287440300122136&i=61528&fp=1207037887&n=1"
-        ServiceLayer.shared.checkService.obtainCheckInfo(rawQRCode: rawQRCode) { result in
-            switch result {
-            case .error(let error):
-                print(error)
-            case .success(let model):
-                dump(model)
-            }
-        }
+//        let rawQRCode = "t=20190913T130200&s=190.00&fn=9287440300122136&i=61528&fp=1207037887&n=1"
+//        ServiceLayer.shared.checkService.obtainCheckInfo(rawQRCode: rawQRCode) { result in
+//            switch result {
+//            case .error(let error):
+//                print(error)
+//            case .success(let model):
+//                dump(model)
+//            }
+//        }
         
         return true
     }

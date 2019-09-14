@@ -10,11 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var moneyAmount: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupCards()
+        
     }
 
+    func setupCards() {
+        let firstCard: MainView = MainView.loadFromNib()
+        firstCard.cardImage.image = UIImage(named: "card")
+        firstCard.cardName.text = "Счет ВТБ"
+        firstCard.moneyAmount.text = "31 600, 00 ₽"
+        stackView.addArrangedSubview(firstCard)
+        let secondCard: MainView = MainView.loadFromNib()
+        secondCard.cardImage.image = UIImage(named: "card")
+        secondCard.cardName.text = "Счет Tinkoff Black"
+        secondCard.moneyAmount.text = "6 100, 00 ₽"
+        stackView.addArrangedSubview(secondCard)
+    }
 
 }
 
