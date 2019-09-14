@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		083EC13FACE63EA2621C8EC9 /* Pods_VTBHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */; };
+		30F9A4E3232D50990043082C /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9A4E1232D50990043082C /* CardCell.swift */; };
+		30F9A4E4232D50990043082C /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4E2232D50990043082C /* CardCell.xib */; };
+		30F9A4E7232D86040043082C /* SugestionFlow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4E6232D86040043082C /* SugestionFlow.storyboard */; };
+		30F9A4E9232D863F0043082C /* SugestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9A4E8232D863F0043082C /* SugestsViewController.swift */; };
+		30F9A4EB232D8FE60043082C /* SugestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9A4EA232D8FE60043082C /* SugestsView.swift */; };
+		30F9A4ED232D908D0043082C /* SugestsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4EC232D908D0043082C /* SugestsView.xib */; };
 		CABAC173232D0EA80069D545 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AccountService.swift */; };
 		CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC177232D0FFA0069D545 /* AuthRequest.swift */; };
 		CABAC17D232D10930069D545 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17C232D10930069D545 /* Parser.swift */; };
@@ -72,6 +78,12 @@
 
 /* Begin PBXFileReference section */
 		259B98DA860AAF38A43862AF /* Pods_VTBHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VTBHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F9A4E1232D50990043082C /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		30F9A4E2232D50990043082C /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		30F9A4E6232D86040043082C /* SugestionFlow.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SugestionFlow.storyboard; sourceTree = "<group>"; };
+		30F9A4E8232D863F0043082C /* SugestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestsViewController.swift; sourceTree = "<group>"; };
+		30F9A4EA232D8FE60043082C /* SugestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SugestsView.swift; sourceTree = "<group>"; };
+		30F9A4EC232D908D0043082C /* SugestsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SugestsView.xib; sourceTree = "<group>"; };
 		62958855CA6EBB12BBDA1C58 /* Pods-VTBHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.debug.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDAF2201AE63377F42FEEC1 /* Pods-VTBHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.release.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.release.xcconfig"; sourceTree = "<group>"; };
 		CABAC172232D0EA80069D545 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
@@ -150,6 +162,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30F9A4E5232D85580043082C /* ExtraFunctional */ = {
+			isa = PBXGroup;
+			children = (
+				30F9A4E6232D86040043082C /* SugestionFlow.storyboard */,
+				30F9A4E8232D863F0043082C /* SugestsViewController.swift */,
+			);
+			path = ExtraFunctional;
+			sourceTree = "<group>";
+		};
 		3CD776057210B57BD79F4727 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +284,8 @@
 			children = (
 				DE534D5B232D4C0500E8F877 /* MainView.xib */,
 				DE534D5C232D4C0500E8F877 /* MainView.swift */,
+				30F9A4EA232D8FE60043082C /* SugestsView.swift */,
+				30F9A4EC232D908D0043082C /* SugestsView.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -306,6 +329,8 @@
 				DEB97A47232CDFFF00F85CC3 /* LaunchScreen.storyboard */,
 				DEB97A4A232CDFFF00F85CC3 /* Info.plist */,
 				DE534D61232D4DE600E8F877 /* AuthStoryboard.storyboard */,
+				30F9A4E1232D50990043082C /* CardCell.swift */,
+				30F9A4E2232D50990043082C /* CardCell.xib */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -346,6 +371,7 @@
 				DE4280C1232DA3E300EE9D78 /* PeopleSelector */,
 				DE4280B8232D8B5A00EE9D78 /* Menu */,
 				DE4280AD232D709100EE9D78 /* People */,
+				30F9A4E5232D85580043082C /* ExtraFunctional */,
 				DE534D5A232D4C0500E8F877 /* Main */,
 				DEB97A69232D12AB00F85CC3 /* TopNotification */,
 				DEB97A65232D125600F85CC3 /* Helper */,
@@ -464,6 +490,14 @@
 				DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */,
 				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
 				DE4280BB232D8B9200EE9D78 /* MenuView.xib in Resources */,
+				30F9A4ED232D908D0043082C /* SugestsView.xib in Resources */,
+				DEB97A7F232D31D100F85CC3 /* NeedAuthView.xib in Resources */,
+				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
+				30F9A4E7232D86040043082C /* SugestionFlow.storyboard in Resources */,
+				DEB97A63232D112000F85CC3 /* Profile.storyboard in Resources */,
+				DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */,
+				DEB97A44232CDFFE00F85CC3 /* Main.storyboard in Resources */,
+				30F9A4E4232D50990043082C /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +569,7 @@
 				DE4280C9232DAA0100EE9D78 /* SelectorCell.swift in Sources */,
 				CABAC173232D0EA80069D545 /* AccountService.swift in Sources */,
 				DE4280C3232DA40300EE9D78 /* PeopleSelectorView.swift in Sources */,
+				30F9A4E3232D50990043082C /* CardCell.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
 				CABAC19E232D5FCA0069D545 /* AccountAddressDto.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
@@ -545,6 +580,7 @@
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */,
+				CABAC17F232D10B80069D545 /* Account.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
 				CABAC196232D45790069D545 /* InvoiceRequest.swift in Sources */,
 				DE4280BC232D8B9200EE9D78 /* MenuView.swift in Sources */,
@@ -554,11 +590,13 @@
 				CABAC198232D50470069D545 /* InvoiceInfoRequest.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
 				DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */,
+				30F9A4EB232D8FE60043082C /* SugestsView.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,
 				CABAC18A232D15A50069D545 /* CheckInfoService.swift in Sources */,
 				CABAC194232D44090069D545 /* InvoiceDto.swift in Sources */,
 				CABAC182232D11380069D545 /* RequestSender.swift in Sources */,
 				CABAC192232D413D0069D545 /* InvoiceService.swift in Sources */,
+				30F9A4E9232D863F0043082C /* SugestsViewController.swift in Sources */,
 				CABAC190232D2CB30069D545 /* AccountBalanceDto.swift in Sources */,
 				CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
