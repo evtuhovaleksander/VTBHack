@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PassKit
+import Stripe
 
 class PeopleViewController: UIViewController {
 
@@ -164,6 +166,22 @@ extension PeopleViewController: UITableViewDelegate {
         header.headerTitle.text = "Участники"
         return header
     }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if model.count == 0 {
+            return nil
+        }
+        
+        let view = UIView()
+        let paymentButton = PKPaymentButton(paymentButtonType: .buy, paymentButtonStyle: .black)
+        paymentButton.translatesAutoresizingMaskIntoConstraints = false
+        paymentButton.addTarget(self, action: #selector(applePayButtonTapped(sender:)), for: .touchUpInside)
+        view.addSubview(paymentButton)
+        
+        view.addConstraint(NSLayoutConstraint(item: paymentButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: paymentButton, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 8))
+        return view
+    }
 }
 
 extension PeopleViewController: UITableViewDataSource {
@@ -178,5 +196,49 @@ extension PeopleViewController: UITableViewDataSource {
         cell.fill(partner: contact)
         cell.invoiceInfo.isHidden = false
         return cell
+    }
+}
+
+extension PeopleViewController: PKPaymentAuthorizationViewControllerDelegate {
+    
+    @objc private func applePayButtonTapped(sender: UIButton) {
+        // Cards that should be accepted
+        let paymentNetworks:[PKPaymentNetwork] = [.amex,.masterCard,.visa]
+        
+        if PKPaymentAuthorizationViewController.canMakePayments(usingNetworks: paymentNetworks) {
+            let request = PKPaymentRequest()
+            
+            request.merchantIdentifier = "merchant.com.shiningdevelopers"
+            request.countryCode = "CA"
+            request.currencyCode = "CAD"
+            request.supportedNetworks = paymentNetworks
+            request.requiredShippingContactFields = [.name, .postalAddress]
+            // This is based on using Stripe
+            request.merchantCapabilities = .capability3DS
+            
+            let tshirt = PKPaymentSummaryItem(label: "T-shirt", amount: NSDecimalNumber(decimal:1.00), type: .final)
+            let shipping = PKPaymentSummaryItem(label: "Shipping", amount: NSDecimalNumber(decimal:1.00), type: .final)
+            let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(decimal:1.00), type: .final)
+            let total = PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(decimal:3.00), type: .final)
+            request.paymentSummaryItems = [tshirt, shipping, tax, total]
+            
+            let authorizationViewController = PKPaymentAuthorizationViewController(paymentRequest: request)
+            
+            if let viewController = authorizationViewController {
+                viewController.delegate = self
+                
+                present(viewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func paymentAuthorizationViewController(_ controller: PKPaymentAuthorizationViewController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
+        // Let the Operating System know that the payment was accepted successfully
+        completion(PKPaymentAuthorizationResult(status: .success, errors: nil))
+    }
+    
+    func paymentAuthorizationViewControllerDidFinish(_ controller: PKPaymentAuthorizationViewController) {
+        // Dismiss the Apple Pay UI
+        dismiss(animated: true, completion: nil)
     }
 }
