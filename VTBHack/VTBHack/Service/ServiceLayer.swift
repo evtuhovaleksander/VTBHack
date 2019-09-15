@@ -27,3 +27,7 @@ class ServiceLayer {
     }
     
 }
+
+struct State {
+    
+}

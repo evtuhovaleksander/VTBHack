@@ -112,7 +112,7 @@ class ItemsViewController: UIViewController {
         } else {
             scanQRButton.setTitle("Сканируй QR код", for: .normal)
             scanQRButton.backgroundColor = UIColor.Color.darkBlue
-            scanQRButton.isHidden = false
+            scanQRButton.isHidden = true
             cnt.isHidden = false
         }
     }
@@ -181,9 +181,8 @@ extension ItemsViewController: UITableViewDelegate {
         
         if indexPath.section == 1 {
             let el = model.items.first(where: { return
-                $0.title == model.items[indexPath.row].title
+                $0.title == model.items.filter({ $0.selectedPersonId == currentPersonId })[indexPath.row].title
                 && $0.selectedPersonId == currentPersonId
-                
             })
             el?.selectedPersonId = nil
         } else {
@@ -227,7 +226,12 @@ extension ItemsViewController: UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: itemCellID, for: indexPath)
             as? ItemCell else { return UITableViewCell() }
-        let item = model.items[indexPath.row]
+        var item = model.items[indexPath.row]
+        
+        if indexPath.section == 1 {
+            item = model.items.filter({ $0.selectedPersonId ?? -999 == currentPersonId })[indexPath.row]
+        }
+        
         cell.fill(item: item, people: people)
         return cell
     }

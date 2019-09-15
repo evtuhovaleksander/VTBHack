@@ -34,7 +34,6 @@ class ProfileViewController: UIViewController {
     }
     
     func setupUI() {
-        headerView.backgroundColor = UIColor.Color.darkBlue
         view.backgroundColor = UIColor.Color.backgroundGray
         avatarImageView.tintColor = UIColor.Color.blueButtonBorder
         avatarImageView.image = UIImage.Image.profileSceleton

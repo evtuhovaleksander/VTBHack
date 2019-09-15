@@ -46,6 +46,10 @@
 		CABAC1BD232DA68F0069D545 /* ItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */; };
 		CABAC1C0232DA8BF0069D545 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */; };
 		CABAC1C1232DA8BF0069D545 /* AddItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */; };
+		CABAC210232E0A280069D545 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC20F232E0A280069D545 /* PeopleViewController.swift */; };
+		CABAC213232E0E6F0069D545 /* PartnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC211232E0E6F0069D545 /* PartnerCell.swift */; };
+		CABAC214232E0E6F0069D545 /* PartnerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABAC212232E0E6F0069D545 /* PartnerCell.xib */; };
+		CABAC216232E0E7E0069D545 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC215232E0E7E0069D545 /* Partner.swift */; };
 		DE2A90B4232E05E700E44301 /* NewMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2A90B3232E05E700E44301 /* NewMessageNode.swift */; };
 		DE4280A9232D664C00EE9D78 /* MyAddressQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */; };
 		DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280B6232D800500EE9D78 /* MultiPeerService.swift */; };
@@ -153,6 +157,11 @@
 		CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDataSource.swift; sourceTree = "<group>"; };
 		CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
 		CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemCell.xib; sourceTree = "<group>"; };
+		CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		CABAC20F232E0A280069D545 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		CABAC211232E0E6F0069D545 /* PartnerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerCell.swift; sourceTree = "<group>"; };
+		CABAC212232E0E6F0069D545 /* PartnerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PartnerCell.xib; sourceTree = "<group>"; };
+		CABAC215232E0E7E0069D545 /* Partner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
 		DE2A90B3232E05E700E44301 /* NewMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageNode.swift; sourceTree = "<group>"; };
 		DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressQRCodeViewController.swift; sourceTree = "<group>"; };
 		DE4280B6232D800500EE9D78 /* MultiPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPeerService.swift; sourceTree = "<group>"; };
@@ -325,6 +334,8 @@
 				CABAC1A7232D705F0069D545 /* GroupsViewController.swift */,
 				CABAC1B2232D8A860069D545 /* MainContainerViewController.swift */,
 				CABAC1BA232DA4B90069D545 /* ItemsViewController.swift */,
+				CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */,
+				CABAC20F232E0A280069D545 /* PeopleViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -338,6 +349,8 @@
 				CABAC1B5232D9D450069D545 /* ItemCell.xib */,
 				CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */,
 				CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */,
+				CABAC211232E0E6F0069D545 /* PartnerCell.swift */,
+				CABAC212232E0E6F0069D545 /* PartnerCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -358,6 +371,7 @@
 				CABAC1B0232D7F230069D545 /* GroupDatasource.swift */,
 				CABAC1B8232DA37A0069D545 /* Item.swift */,
 				CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */,
+				CABAC215232E0E7E0069D545 /* Partner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -643,6 +657,7 @@
 				CABAC1C1232DA8BF0069D545 /* AddItemCell.xib in Resources */,
 				DEB97A46232CDFFF00F85CC3 /* Assets.xcassets in Resources */,
 				CABAC1A6232D69EC0069D545 /* GroupCell.xib in Resources */,
+				CABAC214232E0E6F0069D545 /* PartnerCell.xib in Resources */,
 				DEEE1EBC232DB4F40022139B /* PeopleSelectorView.xib in Resources */,
 				DEEE1ECE232DB5260022139B /* PeopleCell.xib in Resources */,
 				DE534D62232D4DE600E8F877 /* AuthStoryboard.storyboard in Resources */,
@@ -723,6 +738,7 @@
 				DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */,
 				CABAC1AF232D7B710069D545 /* Group.swift in Sources */,
 				DE534D60232D4C0500E8F877 /* MainView.swift in Sources */,
+				CABAC210232E0A280069D545 /* PeopleViewController.swift in Sources */,
 				DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */,
 				DEAF87E0232D5F8800707350 /* InfoService.swift in Sources */,
 				DEEE1ED0232DB5260022139B /* PeoplePickerViewController.swift in Sources */,
@@ -766,6 +782,7 @@
 				DEEE1EFB232E04B40022139B /* RFBorder.swift in Sources */,
 				DEEE1ECF232DB5260022139B /* PeopleDataSource.swift in Sources */,
 				DEEE1ED2232DCA820022139B /* ModalLoadingIndicator.swift in Sources */,
+				CABAC213232E0E6F0069D545 /* PartnerCell.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
@@ -776,6 +793,7 @@
 				CABAC1BD232DA68F0069D545 /* ItemsDataSource.swift in Sources */,
 				CABAC198232D50470069D545 /* InvoiceInfoRequest.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
+				CABAC216232E0E7E0069D545 /* Partner.swift in Sources */,
 				DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */,
 				30F9A4EB232D8FE60043082C /* SugestsView.swift in Sources */,
 				CABAC1C0232DA8BF0069D545 /* AddItemCell.swift in Sources */,

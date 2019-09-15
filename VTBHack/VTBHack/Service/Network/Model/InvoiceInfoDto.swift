@@ -40,4 +40,21 @@ enum InvoiceState: Int, Decodable {
     case timeout
     /// 5 - Оплачен
     case closed
+    
+    var stateDescription: String {
+        switch self {
+        case .undefined:
+            return "Не определен"
+        case .created:
+            return "Создан"
+        case .open:
+            return "Выставлен"
+        case .wrong:
+            return "Ошибочный счет"
+        case .timeout:
+            return "Истекло время действия счета"
+        case .closed:
+            return "Оплачен"
+        }
+    }
 }
