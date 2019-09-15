@@ -19,9 +19,8 @@ class PeoplePickerViewController: UIViewController {
     
     @IBOutlet var actionButton: UIButton!
     weak var delegate: PeoplePickerViewControllerDelegate?
-    //var dataSource = PeopleDataSource()
+    var dataSource: PeopleDataSource!
     //var dataSource = ContactBookPeopleDataSource()
-    var dataSource = MultiPeerPeopleDataSource()
     let identifier = "\(PeopleCell.self)"
     override func viewDidLoad() {
         super.viewDidLoad()

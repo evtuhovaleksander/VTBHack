@@ -80,7 +80,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.062745098040000002" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.063477277760000006" green="0.1616572738" blue="0.37444186210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="09d-da-0zp"/>
                                     <constraint firstAttribute="trailing" secondItem="Vy7-Ok-YZC" secondAttribute="trailing" constant="16" id="8tu-0V-WpX"/>
@@ -189,16 +189,50 @@
             </objects>
             <point key="canvasLocation" x="1486.9565217391305" y="977.67857142857133"/>
         </scene>
-        <!--View Controller-->
+        <!--People View Controller-->
         <scene sceneID="KFB-gd-3rv">
             <objects>
-                <viewController storyboardIdentifier="PeopleViewController" id="IE6-h3-foL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeopleViewController" id="IE6-h3-foL" customClass="PeopleViewController" customModule="VTBHack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fwL-vO-s2E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.50690835020849012" green="0.64864951558343853" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G0b-3z-d6j">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZL-5X-ZNr">
+                                <rect key="frame" x="12" y="790" width="390" height="52"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="wlx-Jt-qEL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Добавить человека">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addPeopleTapped:" destination="IE6-h3-foL" eventType="touchUpInside" id="zNw-7C-jml"/>
+                                    <action selector="qrCodeScanDidTapped:" destination="eNl-vs-HNw" eventType="touchUpInside" id="qAV-ti-utE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G0b-3z-d6j" firstAttribute="leading" secondItem="0cS-wa-QGI" secondAttribute="leading" id="0CE-BK-XF8"/>
+                            <constraint firstItem="G0b-3z-d6j" firstAttribute="top" secondItem="0cS-wa-QGI" secondAttribute="top" id="6v5-6d-nGN"/>
+                            <constraint firstItem="0cS-wa-QGI" firstAttribute="bottom" secondItem="fZL-5X-ZNr" secondAttribute="bottom" constant="20" id="Oed-LD-QvT"/>
+                            <constraint firstItem="0cS-wa-QGI" firstAttribute="trailing" secondItem="fZL-5X-ZNr" secondAttribute="trailing" constant="12" id="RaH-qR-qlO"/>
+                            <constraint firstItem="0cS-wa-QGI" firstAttribute="bottom" secondItem="G0b-3z-d6j" secondAttribute="bottom" id="cWD-R8-6uz"/>
+                            <constraint firstItem="0cS-wa-QGI" firstAttribute="trailing" secondItem="G0b-3z-d6j" secondAttribute="trailing" id="f3O-K6-bpl"/>
+                            <constraint firstItem="fZL-5X-ZNr" firstAttribute="leading" secondItem="0cS-wa-QGI" secondAttribute="leading" constant="12" id="rWQ-iv-djc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0cS-wa-QGI"/>
                     </view>
+                    <connections>
+                        <outlet property="addPeopleButton" destination="fZL-5X-ZNr" id="VKm-NW-Qk2"/>
+                        <outlet property="tableView" destination="G0b-3z-d6j" id="F0W-zt-0OD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xqh-M8-fId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,7 +444,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.062745098040000002" green="0.13725490200000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.063477277760000006" green="0.1616572738" blue="0.37444186210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="caL-vX-vDb" firstAttribute="centerX" secondItem="0ct-lD-b7e" secondAttribute="centerX" id="91I-I8-7di"/>
                                     <constraint firstItem="caL-vX-vDb" firstAttribute="centerY" secondItem="0ct-lD-b7e" secondAttribute="centerY" id="NH8-xc-QhV"/>
@@ -430,7 +464,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="amountTextField" destination="etk-7e-i1a" id="ngb-Gf-z1t"/>
-                        <outlet property="nameTextField" destination="S2P-c7-SlQ" id="JtZ-Fc-24S"/>
+                        <outlet property="priceTextField" destination="G71-Hd-MJp" id="pAj-lh-L3T"/>
                         <outlet property="quantityTextField" destination="cDV-sC-Zse" id="Ni7-7s-14w"/>
                     </connections>
                 </viewController>

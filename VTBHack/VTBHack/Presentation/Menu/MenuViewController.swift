@@ -16,7 +16,7 @@ class MenuViewController: UIViewController {
     
     var snapImage: UIImage?
     
-    class func getController(titles:[String],actions: [VoidBlock]) -> MenuViewController {
+    class func getController(titles:[String],actions: [VoidBlock?]) -> MenuViewController {
         let board = UIStoryboard(name: "Menu", bundle: nil)
         let controller = board.instantiateInitialViewController() as! MenuViewController
         controller.actions = actions
@@ -27,7 +27,7 @@ class MenuViewController: UIViewController {
     }
     
     var titles = [String]()
-    var actions = [VoidBlock]()
+    var actions = [VoidBlock?]()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -36,7 +36,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .clear
+//        view.backgroundColor = .clear
         for i in 0 ..< titles.count {
             let item: MenuView = MenuView.loadFromNib()
             item.action = {
@@ -45,7 +45,7 @@ class MenuViewController: UIViewController {
                 self.view.removeFromSuperview()
                 //action()
                 self.dismiss(animated: true, completion: {
-                    action()
+                    action?()
                 })
             }
             item.button.setTitle(titles[i], for: .normal)
