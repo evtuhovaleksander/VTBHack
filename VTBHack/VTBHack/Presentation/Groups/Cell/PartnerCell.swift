@@ -22,6 +22,7 @@ class PartnerCell: UITableViewCell {
     
     weak var delegate: PartnerCellDelegate?
     var cellId: Int!
+    var contact: Contact!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,14 +34,16 @@ class PartnerCell: UITableViewCell {
         delegate?.generateQRCodeTapped(cellId: cellId)
     }
     
-    func fill(partner: Partner) {
+    func fill(partner: Contact) {
         invoiceInfo.isHidden = true
-        identifierLabel.text = partner.id
+        identifierLabel.text = partner.phone
+        self.contact = partner
     }
     
-    func fill(partner: Partner, invoice: InvoiceInfoDto) {
+    func fill(partner: Contact, invoice: InvoiceInfoDto) {
+        self.contact = partner
         invoiceInfo.isHidden = false
-        identifierLabel.text = partner.id
+        identifierLabel.text = partner.phone
         amountLabel.text = "\(invoice.data.amount) Р"
         statusLabel.text = invoice.data.state.stateDescription
     }

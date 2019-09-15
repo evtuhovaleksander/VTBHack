@@ -20,8 +20,19 @@ class PeopleViewController: UIViewController {
         addPeopleButton.clipsToBounds = true
     }
     
+    var model = [Contact]() {
+        didSet { tableView.reloadData() }
+    }
+    var cellID = "\(PartnerCell.self)"
+    let headerID = "\(GroupSectionView.self)"
+    
     func setupTableView() {
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.register(UINib(nibName: headerID, bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
     }
     
     @IBAction func addPeopleTapped(_ sender: Any) {
@@ -68,16 +79,19 @@ class PeopleViewController: UIViewController {
     
     func openContactsPicker() {
         let stb = UIStoryboard(name: "People", bundle: nil)
-        guard let vc = stb.instantiateInitialViewController() as? PeoplePickerViewController else { return }
+        guard let nc = stb.instantiateInitialViewController() as? UINavigationController else { return }
+        guard let vc = nc.topViewController as? PeoplePickerViewController else { return }
         vc.dataSource = ContactBookPeopleDataSource()
-        present(vc, animated: true, completion: nil)
+        vc.delegate = self
+        present(nc, animated: true, completion: nil)
     }
     
     func openBluetooth() {
         let stb = UIStoryboard(name: "People", bundle: nil)
-        guard let vc = stb.instantiateInitialViewController() as? PeoplePickerViewController else { return }
+        guard let nc = stb.instantiateInitialViewController() as? UINavigationController else { return }
+        guard let vc = nc.topViewController as? PeoplePickerViewController else { return }
         vc.dataSource = MultiPeerPeopleDataSource()
-        present(vc, animated: true, completion: nil)
+        present(nc, animated: true, completion: nil)
     }
     
     
@@ -92,7 +106,57 @@ class PeopleViewController: UIViewController {
     }
     
     func addByIdentifier() {
-        // обычный алерт с 1 полем ввода
+        let alert = UIAlertController(
+            title: "Добавление по идентификатору",
+            message: "",
+            preferredStyle: .alert
+        )
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Введите идентификатор"
+        }
+        
+        alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            guard let phone = textField?.text else { return }
+            let contact = Contact(phone: phone, nickName: phone, selected: true)
+            self.model.append(contact)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
+}
+
+extension PeopleViewController: PeoplePickerViewControllerDelegate {
+    func picked(contacts: [Contact]) {
+        model.append(contentsOf: contacts)
+    }
+}
+
+extension PeopleViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 55
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! GroupSectionView
+        header.headerTitle.text = "Участники"
+        return header
+    }
+}
+
+extension PeopleViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return model.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
+            as? PartnerCell else { return UITableViewCell() }
+        let contact = model[indexPath.row]
+        cell.fill(partner: contact)
+        cell.invoiceInfo.isHidden = false
+        return cell
+    }
 }

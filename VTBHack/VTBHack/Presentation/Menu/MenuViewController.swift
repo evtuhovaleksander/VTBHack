@@ -41,11 +41,11 @@ class MenuViewController: UIViewController {
             let item: MenuView = MenuView.loadFromNib()
             item.action = {
                 let action = self.actions[i]
-                self.removeFromParent()
-                self.view.removeFromSuperview()
                 //action()
                 self.dismiss(animated: true, completion: {
                     action?()
+                    self.removeFromParent()
+                    self.view.removeFromSuperview()
                 })
             }
             item.button.setTitle(titles[i], for: .normal)

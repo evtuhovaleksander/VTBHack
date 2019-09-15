@@ -13,6 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="3Ty-jD-fjm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGV-wa-maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="38c-GW-GfH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MaY-Ij-jXD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -22,7 +23,6 @@
                         <segue destination="1Jp-FX-FSv" kind="relationship" relationship="rootViewController" id="VWk-LM-8QA"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jGV-wa-maw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-713" y="118"/>
         </scene>
@@ -45,7 +45,7 @@
                                 </view>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="04e-Z3-lSv">
-                                <rect key="frame" x="12" y="818" width="390" height="52"/>
+                                <rect key="frame" x="12" y="790" width="390" height="52"/>
                                 <color key="backgroundColor" red="0.0" green="0.73333333329999995" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="vdG-Gp-m89"/>
@@ -63,7 +63,7 @@
                         <constraints>
                             <constraint firstItem="SuH-RQ-en8" firstAttribute="top" secondItem="Rgu-ag-WP7" secondAttribute="top" id="3Wg-Zj-oXp"/>
                             <constraint firstItem="SuH-RQ-en8" firstAttribute="leading" secondItem="Rgu-ag-WP7" secondAttribute="leading" id="6Kb-nE-AS6"/>
-                            <constraint firstItem="04e-Z3-lSv" firstAttribute="bottom" secondItem="Rgu-ag-WP7" secondAttribute="bottom" constant="8" id="UrU-nZ-hUo"/>
+                            <constraint firstItem="04e-Z3-lSv" firstAttribute="bottom" secondItem="Rgu-ag-WP7" secondAttribute="bottom" constant="-20" id="UrU-nZ-hUo"/>
                             <constraint firstItem="Rgu-ag-WP7" firstAttribute="trailing" secondItem="04e-Z3-lSv" secondAttribute="trailing" constant="12" id="he9-1i-ekA"/>
                             <constraint firstAttribute="bottom" secondItem="SuH-RQ-en8" secondAttribute="bottom" id="oN5-3v-6zQ"/>
                             <constraint firstItem="04e-Z3-lSv" firstAttribute="leading" secondItem="Rgu-ag-WP7" secondAttribute="leading" constant="12" id="q84-if-rzZ"/>

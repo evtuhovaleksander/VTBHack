@@ -28,13 +28,14 @@ class PeopleCell: UITableViewCell {
         avatarContainerView.backgroundColor = UIColor.Color.blueButtonBorder
         containerView.backgroundColor = .white
         backgroundColor = .clear
+        selectionStyle = .none
     }
     
     func configure(model: Contact) {
         nickLabel.text = model.nickName
         phoneLabel.text = model.phone
         selectedImageView.image = model.selected
-        ? UIImage.Image.profileSceleton
+        ? UIImage(named: "check1")
         : nil
     }
     
