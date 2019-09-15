@@ -46,28 +46,7 @@
 		CABAC1BD232DA68F0069D545 /* ItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */; };
 		CABAC1C0232DA8BF0069D545 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */; };
 		CABAC1C1232DA8BF0069D545 /* AddItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */; };
-		CABAC1D1232DB8B00069D545 /* QRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */; };
-		CABAC1D4232DB9030069D545 /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */; };
-		CABAC1D6232DC1550069D545 /* ModalLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */; };
-		CABAC1D8232DD42F0069D545 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */; };
-		CABAC1F9232DFAE70069D545 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1E8232DFAE20069D545 /* ChatController.swift */; };
-		CABAC1FA232DFAE70069D545 /* RFDisplayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1E9232DFAE30069D545 /* RFDisplayNode.swift */; };
-		CABAC1FB232DFAE70069D545 /* ChatDateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1EA232DFAE30069D545 /* ChatDateNode.swift */; };
-		CABAC1FC232DFAE70069D545 /* ChatController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1EB232DFAE30069D545 /* ChatController+DataSource.swift */; };
-		CABAC1FD232DFAE70069D545 /* RFTextFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1EC232DFAE40069D545 /* RFTextFieldNode.swift */; };
-		CABAC1FE232DFAE70069D545 /* RFTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1ED232DFAE40069D545 /* RFTextNode.swift */; };
-		CABAC1FF232DFAE70069D545 /* ChatActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1EE232DFAE40069D545 /* ChatActionModel.swift */; };
-		CABAC200232DFAE70069D545 /* ChatActionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1EF232DFAE40069D545 /* ChatActionNode.swift */; };
-		CABAC201232DFAE70069D545 /* StrangerMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F0232DFAE50069D545 /* StrangerMessageNode.swift */; };
-		CABAC202232DFAE70069D545 /* ChatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F1232DFAE50069D545 /* ChatNode.swift */; };
-		CABAC203232DFAE70069D545 /* RFSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F2232DFAE50069D545 /* RFSpacer.swift */; };
-		CABAC204232DFAE70069D545 /* UserMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F3232DFAE60069D545 /* UserMessageNode.swift */; };
-		CABAC205232DFAE70069D545 /* RFBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F4232DFAE60069D545 /* RFBorder.swift */; };
-		CABAC206232DFAE70069D545 /* RFTextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F5232DFAE60069D545 /* RFTextAttributes.swift */; };
-		CABAC207232DFAE70069D545 /* RFShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F6232DFAE60069D545 /* RFShadow.swift */; };
-		CABAC208232DFAE70069D545 /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F7232DFAE70069D545 /* ChatMessageModel.swift */; };
-		CABAC209232DFAE70069D545 /* ChatDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1F8232DFAE70069D545 /* ChatDateModel.swift */; };
-		CABAC20E232DFB640069D545 /* NewMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC20D232DFB630069D545 /* NewMessageNode.swift */; };
+		DE2A90B4232E05E700E44301 /* NewMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2A90B3232E05E700E44301 /* NewMessageNode.swift */; };
 		DE4280A9232D664C00EE9D78 /* MyAddressQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */; };
 		DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280B6232D800500EE9D78 /* MultiPeerService.swift */; };
 		DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE534D5B232D4C0500E8F877 /* MainView.xib */; };
@@ -109,6 +88,27 @@
 		DEEE1ECE232DB5260022139B /* PeopleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEEE1EC9232DB5260022139B /* PeopleCell.xib */; };
 		DEEE1ECF232DB5260022139B /* PeopleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1ECA232DB5260022139B /* PeopleDataSource.swift */; };
 		DEEE1ED0232DB5260022139B /* PeoplePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1ECB232DB5260022139B /* PeoplePickerViewController.swift */; };
+		DEEE1ED2232DCA820022139B /* ModalLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1ED1232DCA7B0022139B /* ModalLoadingIndicator.swift */; };
+		DEEE1ED6232DCAA50022139B /* QRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1ED4232DCAA50022139B /* QRCodeScanViewController.swift */; };
+		DEEE1ED7232DCAA50022139B /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1ED5232DCAA50022139B /* VideoPreviewView.swift */; };
+		DEEE1ED9232DFF340022139B /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1ED8232DFF310022139B /* AddItemViewController.swift */; };
+		DEEE1EEC232E04B40022139B /* ChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EDB232E04B10022139B /* ChatMessageModel.swift */; };
+		DEEE1EED232E04B40022139B /* ChatNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EDC232E04B10022139B /* ChatNode.swift */; };
+		DEEE1EEE232E04B40022139B /* RFSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EDD232E04B10022139B /* RFSpacer.swift */; };
+		DEEE1EEF232E04B40022139B /* ChatDateNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EDE232E04B10022139B /* ChatDateNode.swift */; };
+		DEEE1EF0232E04B40022139B /* RFTextAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EDF232E04B10022139B /* RFTextAttributes.swift */; };
+		DEEE1EF1232E04B40022139B /* ChatController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE0232E04B10022139B /* ChatController+DataSource.swift */; };
+		DEEE1EF2232E04B40022139B /* RFDisplayNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE1232E04B10022139B /* RFDisplayNode.swift */; };
+		DEEE1EF3232E04B40022139B /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE2232E04B10022139B /* ChatController.swift */; };
+		DEEE1EF4232E04B40022139B /* UserMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE3232E04B10022139B /* UserMessageNode.swift */; };
+		DEEE1EF5232E04B40022139B /* RFShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE4232E04B10022139B /* RFShadow.swift */; };
+		DEEE1EF6232E04B40022139B /* ChatActionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE5232E04B10022139B /* ChatActionModel.swift */; };
+		DEEE1EF7232E04B40022139B /* RFTextNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE6232E04B10022139B /* RFTextNode.swift */; };
+		DEEE1EF8232E04B40022139B /* RFTextFieldNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE7232E04B10022139B /* RFTextFieldNode.swift */; };
+		DEEE1EF9232E04B40022139B /* ChatDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE8232E04B10022139B /* ChatDateModel.swift */; };
+		DEEE1EFA232E04B40022139B /* ChatActionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EE9232E04B10022139B /* ChatActionNode.swift */; };
+		DEEE1EFB232E04B40022139B /* RFBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EEA232E04B10022139B /* RFBorder.swift */; };
+		DEEE1EFC232E04B40022139B /* StrangerMessageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEE1EEB232E04B10022139B /* StrangerMessageNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,28 +153,7 @@
 		CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDataSource.swift; sourceTree = "<group>"; };
 		CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
 		CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemCell.xib; sourceTree = "<group>"; };
-		CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewController.swift; sourceTree = "<group>"; };
-		CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
-		CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLoadingIndicator.swift; sourceTree = "<group>"; };
-		CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		CABAC1E8232DFAE20069D545 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
-		CABAC1E9232DFAE30069D545 /* RFDisplayNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFDisplayNode.swift; sourceTree = "<group>"; };
-		CABAC1EA232DFAE30069D545 /* ChatDateNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDateNode.swift; sourceTree = "<group>"; };
-		CABAC1EB232DFAE30069D545 /* ChatController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatController+DataSource.swift"; sourceTree = "<group>"; };
-		CABAC1EC232DFAE40069D545 /* RFTextFieldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextFieldNode.swift; sourceTree = "<group>"; };
-		CABAC1ED232DFAE40069D545 /* RFTextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextNode.swift; sourceTree = "<group>"; };
-		CABAC1EE232DFAE40069D545 /* ChatActionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatActionModel.swift; sourceTree = "<group>"; };
-		CABAC1EF232DFAE40069D545 /* ChatActionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatActionNode.swift; sourceTree = "<group>"; };
-		CABAC1F0232DFAE50069D545 /* StrangerMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrangerMessageNode.swift; sourceTree = "<group>"; };
-		CABAC1F1232DFAE50069D545 /* ChatNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatNode.swift; sourceTree = "<group>"; };
-		CABAC1F2232DFAE50069D545 /* RFSpacer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFSpacer.swift; sourceTree = "<group>"; };
-		CABAC1F3232DFAE60069D545 /* UserMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageNode.swift; sourceTree = "<group>"; };
-		CABAC1F4232DFAE60069D545 /* RFBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFBorder.swift; sourceTree = "<group>"; };
-		CABAC1F5232DFAE60069D545 /* RFTextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextAttributes.swift; sourceTree = "<group>"; };
-		CABAC1F6232DFAE60069D545 /* RFShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFShadow.swift; sourceTree = "<group>"; };
-		CABAC1F7232DFAE70069D545 /* ChatMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
-		CABAC1F8232DFAE70069D545 /* ChatDateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDateModel.swift; sourceTree = "<group>"; };
-		CABAC20D232DFB630069D545 /* NewMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewMessageNode.swift; path = VTBHack/Presentation/NewMessageNode.swift; sourceTree = SOURCE_ROOT; };
+		DE2A90B3232E05E700E44301 /* NewMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewMessageNode.swift; sourceTree = "<group>"; };
 		DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressQRCodeViewController.swift; sourceTree = "<group>"; };
 		DE4280B6232D800500EE9D78 /* MultiPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPeerService.swift; sourceTree = "<group>"; };
 		DE534D5B232D4C0500E8F877 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
@@ -218,6 +197,27 @@
 		DEEE1EC9232DB5260022139B /* PeopleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PeopleCell.xib; sourceTree = "<group>"; };
 		DEEE1ECA232DB5260022139B /* PeopleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleDataSource.swift; sourceTree = "<group>"; };
 		DEEE1ECB232DB5260022139B /* PeoplePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeoplePickerViewController.swift; sourceTree = "<group>"; };
+		DEEE1ED1232DCA7B0022139B /* ModalLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalLoadingIndicator.swift; sourceTree = "<group>"; };
+		DEEE1ED4232DCAA50022139B /* QRCodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewController.swift; sourceTree = "<group>"; };
+		DEEE1ED5232DCAA50022139B /* VideoPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
+		DEEE1ED8232DFF310022139B /* AddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		DEEE1EDB232E04B10022139B /* ChatMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageModel.swift; sourceTree = "<group>"; };
+		DEEE1EDC232E04B10022139B /* ChatNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatNode.swift; sourceTree = "<group>"; };
+		DEEE1EDD232E04B10022139B /* RFSpacer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFSpacer.swift; sourceTree = "<group>"; };
+		DEEE1EDE232E04B10022139B /* ChatDateNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDateNode.swift; sourceTree = "<group>"; };
+		DEEE1EDF232E04B10022139B /* RFTextAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextAttributes.swift; sourceTree = "<group>"; };
+		DEEE1EE0232E04B10022139B /* ChatController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChatController+DataSource.swift"; sourceTree = "<group>"; };
+		DEEE1EE1232E04B10022139B /* RFDisplayNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFDisplayNode.swift; sourceTree = "<group>"; };
+		DEEE1EE2232E04B10022139B /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		DEEE1EE3232E04B10022139B /* UserMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMessageNode.swift; sourceTree = "<group>"; };
+		DEEE1EE4232E04B10022139B /* RFShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFShadow.swift; sourceTree = "<group>"; };
+		DEEE1EE5232E04B10022139B /* ChatActionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatActionModel.swift; sourceTree = "<group>"; };
+		DEEE1EE6232E04B10022139B /* RFTextNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextNode.swift; sourceTree = "<group>"; };
+		DEEE1EE7232E04B10022139B /* RFTextFieldNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFTextFieldNode.swift; sourceTree = "<group>"; };
+		DEEE1EE8232E04B10022139B /* ChatDateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDateModel.swift; sourceTree = "<group>"; };
+		DEEE1EE9232E04B10022139B /* ChatActionNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatActionNode.swift; sourceTree = "<group>"; };
+		DEEE1EEA232E04B10022139B /* RFBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RFBorder.swift; sourceTree = "<group>"; };
+		DEEE1EEB232E04B10022139B /* StrangerMessageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrangerMessageNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,10 +321,10 @@
 		CABAC1A0232D67AC0069D545 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DEEE1ED8232DFF310022139B /* AddItemViewController.swift */,
 				CABAC1A7232D705F0069D545 /* GroupsViewController.swift */,
 				CABAC1B2232D8A860069D545 /* MainContainerViewController.swift */,
 				CABAC1BA232DA4B90069D545 /* ItemsViewController.swift */,
-				CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -360,40 +360,6 @@
 				CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		CABAC1D2232DB8E30069D545 /* QR */ = {
-			isa = PBXGroup;
-			children = (
-				CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */,
-				CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */,
-			);
-			path = QR;
-			sourceTree = "<group>";
-		};
-		CABAC20A232DFB000069D545 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				CABAC20D232DFB630069D545 /* NewMessageNode.swift */,
-				CABAC1EE232DFAE40069D545 /* ChatActionModel.swift */,
-				CABAC1EF232DFAE40069D545 /* ChatActionNode.swift */,
-				CABAC1E8232DFAE20069D545 /* ChatController.swift */,
-				CABAC1EB232DFAE30069D545 /* ChatController+DataSource.swift */,
-				CABAC1F8232DFAE70069D545 /* ChatDateModel.swift */,
-				CABAC1EA232DFAE30069D545 /* ChatDateNode.swift */,
-				CABAC1F7232DFAE70069D545 /* ChatMessageModel.swift */,
-				CABAC1F1232DFAE50069D545 /* ChatNode.swift */,
-				CABAC1F4232DFAE60069D545 /* RFBorder.swift */,
-				CABAC1E9232DFAE30069D545 /* RFDisplayNode.swift */,
-				CABAC1F6232DFAE60069D545 /* RFShadow.swift */,
-				CABAC1F2232DFAE50069D545 /* RFSpacer.swift */,
-				CABAC1F5232DFAE60069D545 /* RFTextAttributes.swift */,
-				CABAC1EC232DFAE40069D545 /* RFTextFieldNode.swift */,
-				CABAC1ED232DFAE40069D545 /* RFTextNode.swift */,
-				CABAC1F0232DFAE50069D545 /* StrangerMessageNode.swift */,
-				CABAC1F3232DFAE60069D545 /* UserMessageNode.swift */,
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		DE534D5A232D4C0500E8F877 /* Main */ = {
@@ -486,8 +452,9 @@
 		DEB97A5D232D066C00F85CC3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				CABAC20A232DFB000069D545 /* Chat */,
-				CABAC1D2232DB8E30069D545 /* QR */,
+				DE2A90B3232E05E700E44301 /* NewMessageNode.swift */,
+				DEEE1EDA232E04B10022139B /* Chat */,
+				DEEE1ED3232DCAA50022139B /* QR */,
 				DEEE1EC6232DB5260022139B /* People */,
 				DEEE1EBD232DB5040022139B /* Menu */,
 				DEEE1EB4232DB4F40022139B /* PeopleSelector */,
@@ -520,10 +487,10 @@
 		DEB97A65232D125600F85CC3 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DEEE1ED1232DCA7B0022139B /* ModalLoadingIndicator.swift */,
 				DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */,
 				DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */,
 				DEB97A82232D394900F85CC3 /* UIImage+VTBImage.swift */,
-				CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -574,6 +541,39 @@
 				DEEE1ECB232DB5260022139B /* PeoplePickerViewController.swift */,
 			);
 			path = People;
+			sourceTree = "<group>";
+		};
+		DEEE1ED3232DCAA50022139B /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				DEEE1ED4232DCAA50022139B /* QRCodeScanViewController.swift */,
+				DEEE1ED5232DCAA50022139B /* VideoPreviewView.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		DEEE1EDA232E04B10022139B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				DEEE1EDB232E04B10022139B /* ChatMessageModel.swift */,
+				DEEE1EDC232E04B10022139B /* ChatNode.swift */,
+				DEEE1EDD232E04B10022139B /* RFSpacer.swift */,
+				DEEE1EDE232E04B10022139B /* ChatDateNode.swift */,
+				DEEE1EDF232E04B10022139B /* RFTextAttributes.swift */,
+				DEEE1EE0232E04B10022139B /* ChatController+DataSource.swift */,
+				DEEE1EE1232E04B10022139B /* RFDisplayNode.swift */,
+				DEEE1EE2232E04B10022139B /* ChatController.swift */,
+				DEEE1EE3232E04B10022139B /* UserMessageNode.swift */,
+				DEEE1EE4232E04B10022139B /* RFShadow.swift */,
+				DEEE1EE5232E04B10022139B /* ChatActionModel.swift */,
+				DEEE1EE6232E04B10022139B /* RFTextNode.swift */,
+				DEEE1EE7232E04B10022139B /* RFTextFieldNode.swift */,
+				DEEE1EE8232E04B10022139B /* ChatDateModel.swift */,
+				DEEE1EE9232E04B10022139B /* ChatActionNode.swift */,
+				DEEE1EEA232E04B10022139B /* RFBorder.swift */,
+				DEEE1EEB232E04B10022139B /* StrangerMessageNode.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -715,89 +715,89 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE534D68232D511400E8F877 /* WhitetextField.swift in Sources */,
+				DEEE1EF3232E04B40022139B /* ChatController.swift in Sources */,
+				DEEE1EF6232E04B40022139B /* ChatActionModel.swift in Sources */,
 				CABAC19C232D5F0E0069D545 /* AccountAddressRequest.swift in Sources */,
+				DE2A90B4232E05E700E44301 /* NewMessageNode.swift in Sources */,
 				DEB97A41232CDFFE00F85CC3 /* ViewController.swift in Sources */,
 				DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */,
-				CABAC20E232DFB640069D545 /* NewMessageNode.swift in Sources */,
 				CABAC1AF232D7B710069D545 /* Group.swift in Sources */,
-				CABAC208232DFAE70069D545 /* ChatMessageModel.swift in Sources */,
 				DE534D60232D4C0500E8F877 /* MainView.swift in Sources */,
-				CABAC207232DFAE70069D545 /* RFShadow.swift in Sources */,
-				CABAC1FA232DFAE70069D545 /* RFDisplayNode.swift in Sources */,
-				CABAC1D6232DC1550069D545 /* ModalLoadingIndicator.swift in Sources */,
 				DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */,
 				DEAF87E0232D5F8800707350 /* InfoService.swift in Sources */,
-				CABAC204232DFAE70069D545 /* UserMessageNode.swift in Sources */,
 				DEEE1ED0232DB5260022139B /* PeoplePickerViewController.swift in Sources */,
 				DE4280A9232D664C00EE9D78 /* MyAddressQRCodeViewController.swift in Sources */,
 				DEB97A83232D394900F85CC3 /* UIImage+VTBImage.swift in Sources */,
 				DEB97A54232CEC0200F85CC3 /* ServiceLayer.swift in Sources */,
-				CABAC1FE232DFAE70069D545 /* RFTextNode.swift in Sources */,
+				DEEE1EF7232E04B40022139B /* RFTextNode.swift in Sources */,
 				CABAC1B3232D8A860069D545 /* MainContainerViewController.swift in Sources */,
 				DE534D64232D4E7B00E8F877 /* AuthController.swift in Sources */,
+				DEEE1ED7232DCAA50022139B /* VideoPreviewView.swift in Sources */,
 				DEB97A79232D1B9000F85CC3 /* UIColor+VTBColor.swift in Sources */,
-				CABAC209232DFAE70069D545 /* ChatDateModel.swift in Sources */,
 				DEB97A7B232D256C00F85CC3 /* BlueNavigationController.swift in Sources */,
 				DEB97A5B232D003B00F85CC3 /* QRAddressDto.swift in Sources */,
+				DEEE1EFA232E04B40022139B /* ChatActionNode.swift in Sources */,
 				CABAC19A232D508F0069D545 /* InvoiceInfoDto.swift in Sources */,
 				DEEE1EC4232DB5040022139B /* MenuView.swift in Sources */,
-				CABAC1F9232DFAE70069D545 /* ChatController.swift in Sources */,
+				DEEE1EEC232E04B40022139B /* ChatMessageModel.swift in Sources */,
 				CABAC173232D0EA80069D545 /* AccountService.swift in Sources */,
-				CABAC205232DFAE70069D545 /* RFBorder.swift in Sources */,
+				DEEE1EF5232E04B40022139B /* RFShadow.swift in Sources */,
 				30F9A4E3232D50990043082C /* CardCell.swift in Sources */,
-				CABAC1FC232DFAE70069D545 /* ChatController+DataSource.swift in Sources */,
 				DEEE1EBB232DB4F40022139B /* SelectorCell.swift in Sources */,
 				CABAC1A5232D69EC0069D545 /* GroupCell.swift in Sources */,
+				DEEE1EF9232E04B40022139B /* ChatDateModel.swift in Sources */,
+				DEEE1EEF232E04B40022139B /* ChatDateNode.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
+				DEEE1EF4232E04B40022139B /* UserMessageNode.swift in Sources */,
 				CABAC19E232D5FCA0069D545 /* AccountAddressDto.swift in Sources */,
-				CABAC203232DFAE70069D545 /* RFSpacer.swift in Sources */,
 				CABAC1B9232DA37A0069D545 /* Item.swift in Sources */,
 				CABAC186232D13070069D545 /* CheckInfoRequest.swift in Sources */,
+				DEEE1ED6232DCAA50022139B /* QRCodeScanViewController.swift in Sources */,
 				DEB97A7D232D28E100F85CC3 /* BlueButton.swift in Sources */,
 				CABAC18E232D22E00069D545 /* SessionDto.swift in Sources */,
-				CABAC206232DFAE70069D545 /* RFTextAttributes.swift in Sources */,
-				CABAC201232DFAE70069D545 /* StrangerMessageNode.swift in Sources */,
 				CABAC188232D13B40069D545 /* CheckInfoDto.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				DEEE1EB9232DB4F40022139B /* PeopleSelectorView.swift in Sources */,
+				DEEE1EFC232E04B40022139B /* StrangerMessageNode.swift in Sources */,
 				CABAC1A8232D705F0069D545 /* GroupsViewController.swift in Sources */,
 				DEEE1ECD232DB5260022139B /* PeopleCell.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
+				DEEE1EF2232E04B40022139B /* RFDisplayNode.swift in Sources */,
+				DEEE1EFB232E04B40022139B /* RFBorder.swift in Sources */,
 				DEEE1ECF232DB5260022139B /* PeopleDataSource.swift in Sources */,
-				CABAC1FF232DFAE70069D545 /* ChatActionModel.swift in Sources */,
+				DEEE1ED2232DCA820022139B /* ModalLoadingIndicator.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
-				CABAC200232DFAE70069D545 /* ChatActionNode.swift in Sources */,
-				CABAC1D4232DB9030069D545 /* VideoPreviewView.swift in Sources */,
 				DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
 				DEEE1EC5232DB5040022139B /* MenuViewController.swift in Sources */,
-				CABAC1FD232DFAE70069D545 /* RFTextFieldNode.swift in Sources */,
 				CABAC196232D45790069D545 /* InvoiceRequest.swift in Sources */,
 				DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */,
-				CABAC1FB232DFAE70069D545 /* ChatDateNode.swift in Sources */,
 				CABAC1BD232DA68F0069D545 /* ItemsDataSource.swift in Sources */,
 				CABAC198232D50470069D545 /* InvoiceInfoRequest.swift in Sources */,
-				CABAC1D1232DB8B00069D545 /* QRCodeScanViewController.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
 				DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */,
 				30F9A4EB232D8FE60043082C /* SugestsView.swift in Sources */,
 				CABAC1C0232DA8BF0069D545 /* AddItemCell.swift in Sources */,
+				DEEE1EF8232E04B40022139B /* RFTextFieldNode.swift in Sources */,
+				DEEE1EEE232E04B40022139B /* RFSpacer.swift in Sources */,
 				DEB97A59232CECF400F85CC3 /* Types.swift in Sources */,
 				CABAC18A232D15A50069D545 /* CheckInfoService.swift in Sources */,
 				CABAC1BB232DA4B90069D545 /* ItemsViewController.swift in Sources */,
 				CABAC194232D44090069D545 /* InvoiceDto.swift in Sources */,
 				CABAC1B1232D7F230069D545 /* GroupDatasource.swift in Sources */,
+				DEEE1EF1232E04B40022139B /* ChatController+DataSource.swift in Sources */,
 				CABAC1B6232D9D450069D545 /* ItemCell.swift in Sources */,
-				CABAC202232DFAE70069D545 /* ChatNode.swift in Sources */,
 				CABAC182232D11380069D545 /* RequestSender.swift in Sources */,
 				CABAC192232D413D0069D545 /* InvoiceService.swift in Sources */,
 				CABAC190232D2CB30069D545 /* AccountBalanceDto.swift in Sources */,
+				DEEE1EF0232E04B40022139B /* RFTextAttributes.swift in Sources */,
 				CABAC1AA232D74750069D545 /* GroupSectionView.swift in Sources */,
 				CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
 				CABAC18C232D20030069D545 /* SessionRequest.swift in Sources */,
-				CABAC1D8232DD42F0069D545 /* AddItemViewController.swift in Sources */,
+				DEEE1ED9232DFF340022139B /* AddItemViewController.swift in Sources */,
+				DEEE1EED232E04B40022139B /* ChatNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,13 +946,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P3GN459LWF;
+				DEVELOPMENT_TEAM = X29ZAV8TY6;
 				INFOPLIST_FILE = "$(SRCROOT)/VTBHack/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHackq;
+				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -968,13 +968,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P3GN459LWF;
+				DEVELOPMENT_TEAM = X29ZAV8TY6;
 				INFOPLIST_FILE = "$(SRCROOT)/VTBHack/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHackq;
+				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
