@@ -30,12 +30,6 @@ class AuthController: UIViewController {
         //auth(self)
     }
     
-    func showError(_ error: String) {
-        let alert = UIAlertController(title: "Ошибка", message: error, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true)
-    }
-    
     func getFSID() {
         ServiceLayer.shared.accountService.obtainSession { result in
             switch result {

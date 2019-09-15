@@ -15,6 +15,9 @@ class ItemsViewController: UIViewController {
     
     var isQRCodeParsed = false
     var model = ItemsDataSource()
+    
+    var qrCodeRawString: String? = nil
+    
     private let itemCellID = "\(ItemCell.self)"
     private let addCellID = "\(AddItemCell.self)"
     private let headerID = "\(GroupSectionView.self)"
@@ -40,6 +43,29 @@ class ItemsViewController: UIViewController {
         scanQRButton.clipsToBounds = true
     }
 
+    @IBAction func qrCodeScanDidTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toQRCode", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? QRCodeScanViewController else { return }
+        destination.delegate = self
+    }
+    
+    func updateData() {
+        guard let raw = qrCodeRawString else { return }
+        ModalLoadingIndicator.show()
+        ServiceLayer.shared.checkService.obtainCheckInfo(rawQRCode: raw) { [weak self] result in
+            switch result {
+            case .error(let error):
+                self?.showError(error)
+            case .success(let model):
+                dump(model)
+            }
+            ModalLoadingIndicator.hide()
+        }
+    }
+    
 }
 
 extension ItemsViewController: UITableViewDelegate {
@@ -87,4 +113,11 @@ extension ItemsViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension ItemsViewController: QRCodeScanViewControllerDelegate {
+    func didScanQRCode(rawString: String) {
+        qrCodeRawString = rawString
+        updateData()
+    }
 }

@@ -46,6 +46,9 @@
 		CABAC1BD232DA68F0069D545 /* ItemsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */; };
 		CABAC1C0232DA8BF0069D545 /* AddItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */; };
 		CABAC1C1232DA8BF0069D545 /* AddItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */; };
+		CABAC1D1232DB8B00069D545 /* QRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */; };
+		CABAC1D4232DB9030069D545 /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */; };
+		CABAC1D6232DC1550069D545 /* ModalLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */; };
 		DE4280A9232D664C00EE9D78 /* MyAddressQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */; };
 		DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280B6232D800500EE9D78 /* MultiPeerService.swift */; };
 		DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE534D5B232D4C0500E8F877 /* MainView.xib */; };
@@ -131,6 +134,9 @@
 		CABAC1BC232DA68F0069D545 /* ItemsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsDataSource.swift; sourceTree = "<group>"; };
 		CABAC1BE232DA8BF0069D545 /* AddItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCell.swift; sourceTree = "<group>"; };
 		CABAC1BF232DA8BF0069D545 /* AddItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemCell.xib; sourceTree = "<group>"; };
+		CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewController.swift; sourceTree = "<group>"; };
+		CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
+		CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLoadingIndicator.swift; sourceTree = "<group>"; };
 		DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressQRCodeViewController.swift; sourceTree = "<group>"; };
 		DE4280B6232D800500EE9D78 /* MultiPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPeerService.swift; sourceTree = "<group>"; };
 		DE534D5B232D4C0500E8F877 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
@@ -317,6 +323,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CABAC1D2232DB8E30069D545 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */,
+				CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
 		DE534D5A232D4C0500E8F877 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,6 +422,7 @@
 		DEB97A5D232D066C00F85CC3 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CABAC1D2232DB8E30069D545 /* QR */,
 				DEEE1EC6232DB5260022139B /* People */,
 				DEEE1EBD232DB5040022139B /* Menu */,
 				DEEE1EB4232DB4F40022139B /* PeopleSelector */,
@@ -442,6 +458,7 @@
 				DEB97A66232D126600F85CC3 /* UIView+LoadFromNib.swift */,
 				DEB97A78232D1B9000F85CC3 /* UIColor+VTBColor.swift */,
 				DEB97A82232D394900F85CC3 /* UIImage+VTBImage.swift */,
+				CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -638,6 +655,7 @@
 				DE534D66232D509900E8F877 /* WhiteButton.swift in Sources */,
 				CABAC1AF232D7B710069D545 /* Group.swift in Sources */,
 				DE534D60232D4C0500E8F877 /* MainView.swift in Sources */,
+				CABAC1D6232DC1550069D545 /* ModalLoadingIndicator.swift in Sources */,
 				DE534D6A232D535B00E8F877 /* Hasher.swift in Sources */,
 				DEAF87E0232D5F8800707350 /* InfoService.swift in Sources */,
 				DEEE1ED0232DB5260022139B /* PeoplePickerViewController.swift in Sources */,
@@ -669,6 +687,7 @@
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				DEEE1ECF232DB5260022139B /* PeopleDataSource.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
+				CABAC1D4232DB9030069D545 /* VideoPreviewView.swift in Sources */,
 				DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */,
 				CABAC17F232D10B80069D545 /* AccountDto.swift in Sources */,
 				CABAC17D232D10930069D545 /* Parser.swift in Sources */,
@@ -677,6 +696,7 @@
 				DEB97A67232D126600F85CC3 /* UIView+LoadFromNib.swift in Sources */,
 				CABAC1BD232DA68F0069D545 /* ItemsDataSource.swift in Sources */,
 				CABAC198232D50470069D545 /* InvoiceInfoRequest.swift in Sources */,
+				CABAC1D1232DB8B00069D545 /* QRCodeScanViewController.swift in Sources */,
 				DEB97A5F232D068D00F85CC3 /* ProfileViewController.swift in Sources */,
 				DEB97A81232D31E000F85CC3 /* NeedAuthView.swift in Sources */,
 				30F9A4EB232D8FE60043082C /* SugestsView.swift in Sources */,
@@ -842,13 +862,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X29ZAV8TY6;
+				DEVELOPMENT_TEAM = P3GN459LWF;
 				INFOPLIST_FILE = "$(SRCROOT)/VTBHack/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHack;
+				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHackq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -864,13 +884,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X29ZAV8TY6;
+				DEVELOPMENT_TEAM = P3GN459LWF;
 				INFOPLIST_FILE = "$(SRCROOT)/VTBHack/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHack;
+				PRODUCT_BUNDLE_IDENTIFIER = RxVTBHackq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

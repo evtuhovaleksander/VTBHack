@@ -175,6 +175,9 @@
                                 <state key="normal" title="Сканировать QR-код">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="qrCodeScanDidTapped:" destination="eNl-vs-HNw" eventType="touchUpInside" id="BQw-KT-fvA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -192,6 +195,7 @@
                     <connections>
                         <outlet property="scanQRButton" destination="rif-lu-cUf" id="GV0-um-BKe"/>
                         <outlet property="tableView" destination="vbl-77-8wz" id="LjG-Df-7yG"/>
+                        <segue destination="jhB-Vp-0aa" kind="presentation" identifier="toQRCode" id="zaV-dL-LMr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfO-Uq-36n" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -235,6 +239,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wAa-1w-A7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="191.51785714285714"/>
+        </scene>
+        <!--Code Scan View Controller-->
+        <scene sceneID="wZx-B0-2SL">
+            <objects>
+                <viewController storyboardIdentifier="QRCodeScanViewController" id="jhB-Vp-0aa" customClass="QRCodeScanViewController" customModule="VTBHack" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Gl-KZ-tlq"/>
+                        <viewControllerLayoutGuide type="bottom" id="IJO-xm-qk8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v3h-6q-odD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-9n-7MO" customClass="VideoPreviewView" customModule="QRCode_Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сканировать чек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-Bm-Eak">
+                                        <rect key="frame" x="139" y="826" width="136" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.95384730139999996" green="1" blue="0.98941856490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="5Sp-Bm-Eak" secondAttribute="bottom" constant="15" id="8rA-hL-X1N"/>
+                                    <constraint firstItem="5Sp-Bm-Eak" firstAttribute="centerX" secondItem="1cm-9n-7MO" secondAttribute="centerX" id="SE0-au-5OM"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gz5-3Y-UXR" appends="YES" id="b15-RU-FRU"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="1cm-9n-7MO" firstAttribute="leading" secondItem="v3h-6q-odD" secondAttribute="leading" id="67p-Lz-qel"/>
+                            <constraint firstItem="1cm-9n-7MO" firstAttribute="bottom" secondItem="IJO-xm-qk8" secondAttribute="top" id="X3c-zM-8pL"/>
+                            <constraint firstAttribute="trailing" secondItem="1cm-9n-7MO" secondAttribute="trailing" id="XLe-jy-Y05"/>
+                            <constraint firstItem="1cm-9n-7MO" firstAttribute="top" secondItem="v3h-6q-odD" secondAttribute="top" id="lxV-Jj-Fua"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C2o-Jy-0PR"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="1cm-9n-7MO" id="qnv-Dh-3z2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IaU-79-zKY" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gz5-3Y-UXR">
+                    <connections>
+                        <action selector="selectPreview:" destination="jhB-Vp-0aa" id="Ezt-X9-GuT"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1487" y="1758"/>
         </scene>
     </scenes>
 </document>
