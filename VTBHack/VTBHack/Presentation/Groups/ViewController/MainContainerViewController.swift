@@ -59,6 +59,11 @@ class MainContainerViewController: UIViewController {
     
     func setupSegmentedControl() {
         segmentedControl.selectedSegmentIndex = 1
+        let font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                 NSAttributedString.Key.font: font], for: .selected)
+        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black,
+                                                 NSAttributedString.Key.font: font], for: .normal)
     }
     
     func setupNavbar() {
