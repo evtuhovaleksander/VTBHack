@@ -52,7 +52,7 @@ class ItemsViewController: UIViewController {
         destination.delegate = self
     }
     
-    func updateData() {
+    func obtainCheckData() {
         guard let raw = qrCodeRawString else { return }
         ModalLoadingIndicator.show()
         ServiceLayer.shared.checkService.obtainCheckInfo(rawQRCode: raw) { [weak self] result in
@@ -60,10 +60,23 @@ class ItemsViewController: UIViewController {
             case .error(let error):
                 self?.showError(error)
             case .success(let model):
-                dump(model)
+                self?.model.checkItemsDto = model
+                self?.updateData()
             }
             ModalLoadingIndicator.hide()
         }
+    }
+    
+    func updateData() {
+        model.updateData()
+        isQRCodeParsed = true
+        scanQRButton.isHidden = true
+        tableView.reloadData()
+    }
+    
+    func showMenuAddItem() {
+//        let controller = MenuViewController.getController(titles: ["один", "что-то тут"], actions: [{}, {}])
+        
     }
     
 }
@@ -85,7 +98,7 @@ extension ItemsViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.row == model.items.count {
-            // Вызов UI добавления айтема
+            showMenuAddItem()
         }
         
     }
@@ -103,6 +116,7 @@ extension ItemsViewController: UITableViewDataSource {
         if indexPath.row == model.items.count {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: addCellID, for: indexPath)
                 as? AddItemCell else { return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
         }
         
@@ -118,6 +132,6 @@ extension ItemsViewController: UITableViewDataSource {
 extension ItemsViewController: QRCodeScanViewControllerDelegate {
     func didScanQRCode(rawString: String) {
         qrCodeRawString = rawString
-        updateData()
+        obtainCheckData()
     }
 }

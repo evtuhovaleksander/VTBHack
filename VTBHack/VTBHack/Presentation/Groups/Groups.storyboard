@@ -139,6 +139,42 @@
             <point key="canvasLocation" x="1772" y="192"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="DgM-kb-5hx">
+            <objects>
+                <viewController id="IW9-hQ-CXl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2b2-bj-X2N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRw-G1-rEL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qaz-mQ-qoN">
+                                        <rect key="frame" x="152" y="296" width="110" height="200"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.29648987676056338" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Qaz-mQ-qoN" firstAttribute="centerX" secondItem="SRw-G1-rEL" secondAttribute="centerX" id="Urm-ep-luc"/>
+                                    <constraint firstItem="Qaz-mQ-qoN" firstAttribute="centerY" secondItem="SRw-G1-rEL" secondAttribute="centerY" id="my2-yJ-Jn9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yHO-ho-ifp" firstAttribute="trailing" secondItem="SRw-G1-rEL" secondAttribute="trailing" id="3ac-Fz-KqS"/>
+                            <constraint firstItem="SRw-G1-rEL" firstAttribute="leading" secondItem="yHO-ho-ifp" secondAttribute="leading" id="659-8c-ha2"/>
+                            <constraint firstAttribute="bottom" secondItem="SRw-G1-rEL" secondAttribute="bottom" id="9uZ-No-RNl"/>
+                            <constraint firstItem="SRw-G1-rEL" firstAttribute="top" secondItem="2b2-bj-X2N" secondAttribute="top" id="dmV-SO-wn8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yHO-ho-ifp"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3p-GO-qI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3033" y="192"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="k6o-0z-6UV">
             <objects>
                 <viewController storyboardIdentifier="ChatViewController" id="Dqs-ao-ERg" sceneMemberID="viewController">
