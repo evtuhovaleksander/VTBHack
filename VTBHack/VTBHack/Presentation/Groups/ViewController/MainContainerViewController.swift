@@ -86,6 +86,7 @@ class MainContainerViewController: UIViewController {
             var np = [Contact(phone: "Я", nickName: "Я", selected: false)]
             np.append(contentsOf: peopleViewController.model)
             checkViewController.people = np
+            checkViewController.pvc = peopleViewController
         }
     }
     

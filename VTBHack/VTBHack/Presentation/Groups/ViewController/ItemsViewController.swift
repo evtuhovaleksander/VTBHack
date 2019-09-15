@@ -21,6 +21,7 @@ class ItemsViewController: UIViewController {
     var model = ItemsDataSource()
     var people = [Contact]()
     var currentPersonId = 0
+    var pvc: PeopleViewController?
     
     var qrCodeRawString: String? = nil
     
@@ -64,7 +65,42 @@ class ItemsViewController: UIViewController {
     }
 
     @IBAction func qrCodeScanDidTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toQRCode", sender: nil)
+        if isQRCodeParsed {
+            for i in 0 ..< (pvc?.model.count ?? 0) {
+                let f = model.items.filter({ $0.selectedPersonId == i }).map({ $0.price })
+                let sum = f.reduce(0, +)
+                let nn = "\(Date().timeIntervalSince1970)"
+                ServiceLayer.shared.accountService.obtainAccountAddress(identifier: pvc?.model[i].phone.sha256() ?? "") { result in
+                    switch result {
+                    case .error(let error):
+                        break
+                    case .success(let model):
+                        let adr = model.data.address
+                        ServiceLayer.shared.incoiveService.sendInvoice(
+                            amount: sum,
+                            number: nn,
+                            payer: adr,
+                            recipient: ServiceLayer.shared.infoService.accountAdress ?? "",
+                            completion: { r in
+                                switch r {
+                                case .error(let error):
+                                    break
+                                case .success(let model):
+                                    break
+                                    
+                                }
+                        })
+                    }
+                }
+                
+                //pvc?.model[i]
+                //pvc?.model[i].total =
+            }
+            //scanQRButton.isEnabled = false
+        } else {
+            performSegue(withIdentifier: "toQRCode", sender: nil)
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -113,6 +149,10 @@ class ItemsViewController: UIViewController {
     }
     
     func validate() {
+        
+        
+        isQRCodeParsed = !model.items.isEmpty
+        
         if model.items.filter({ $0.selectedPersonId == nil }).count == 0 {
             scanQRButton.setTitle("Рассчитаться", for: .normal)
             scanQRButton.backgroundColor = UIColor.Color.statusGreen
