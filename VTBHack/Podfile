@@ -10,4 +10,5 @@ target 'VTBHack' do
   pod 'CryptoSwift'
   pod 'Texture'
   pod 'Stripe/ApplePay'
+  pod 'IQKeyboardManagerSwift'
 end

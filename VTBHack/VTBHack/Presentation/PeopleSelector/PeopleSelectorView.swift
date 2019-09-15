@@ -11,7 +11,7 @@ import UIKit
 class PeopleSelectorView: UIView {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var containerView: UIView!
-    
+    var selectedBlock: ((Int)->())?
     override func awakeFromNib() {
         super.awakeFromNib()
         translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ class PeopleSelectorView: UIView {
     
     var expanded = false
     var currentIndex = 0
-    var people = [Int]()
+    var people = [Contact]()
     var views = [SelectorCell]()
     
     @objc func tapped(a: UITapGestureRecognizer) {
@@ -28,15 +28,19 @@ class PeopleSelectorView: UIView {
     }
     
     func setup() {
-        people = [1,2,3]
         for v in stackView.arrangedSubviews {
             stackView.removeArrangedSubview(v)
         }
+        for v in stackView.subviews {
+            v.removeFromSuperview()
+        }
+        
+        views = []
         
         for i in 0..<people.count {
             let menuView: SelectorCell = SelectorCell.loadFromNib()
-            menuView.nickLabel.text = "\(people[i])"
-            menuView.phoneLabel.text = "\(people[i])"
+            menuView.nickLabel.text = "\(people[i].nickName)"
+            menuView.phoneLabel.text = "\(people[i].phone)"
             views.append(menuView)
             stackView.addArrangedSubview(menuView)
             let gesture = UITapGestureRecognizer(target: self, action: #selector(tapped(a:)))
@@ -58,6 +62,7 @@ class PeopleSelectorView: UIView {
                 }
             }
             }
+            selectedBlock?(currentIndex)
         } else {
             UIView.animate(withDuration: 1.0) {
                 for v in self.views {

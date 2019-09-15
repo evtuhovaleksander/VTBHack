@@ -36,8 +36,8 @@ class MainContainerViewController: UIViewController {
         checkViewController.delegate = self
         return checkViewController
     }()
-    lazy var peopleViewController: UIViewController = {
-        groupsStoryboard.instantiateViewController(withIdentifier: "PeopleViewController")
+    lazy var peopleViewController: PeopleViewController = {
+        groupsStoryboard.instantiateViewController(withIdentifier: "PeopleViewController") as! PeopleViewController
     }()
     
     lazy var viewControllers = [chatViewController, checkViewController, peopleViewController]
@@ -87,10 +87,30 @@ class MainContainerViewController: UIViewController {
         let child = viewControllers[index]
         add(child, frame: containerView.frame)
         currentViewController = child
+        if index == 1 {
+            var np = [Contact(phone: "Я", nickName: "Я", selected: false)]
+            np.append(contentsOf: peopleViewController.model)
+            checkViewController.people = np
+            checkViewController.pvc = peopleViewController
+        }
     }
     
     @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
         showController(index: sender.selectedSegmentIndex)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let iden = segue.identifier {
+            if
+                iden == "toAddItem",
+                let dst = segue.destination as? AddItemViewController {
+                dst.addBlock = { item in
+                    self.checkViewController.model.items.append(item)
+                    self.checkViewController.isQRCodeParsed = true
+                    self.checkViewController.updateData()
+                }
+            }
+        }
     }
 }
 

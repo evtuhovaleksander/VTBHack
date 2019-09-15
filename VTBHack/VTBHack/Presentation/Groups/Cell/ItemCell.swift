@@ -12,6 +12,8 @@ class ItemCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet var selectedByLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,7 +23,7 @@ class ItemCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func fill(item: Item) {
+    func fill(item: Item, people: [Contact]) {
         titleLabel.text = item.title
         let attributedString = NSMutableAttributedString(string: "\(item.price) ₽", attributes: [
             .font: UIFont.systemFont(ofSize: 15.0, weight: .bold),
@@ -29,6 +31,15 @@ class ItemCell: UITableViewCell {
             .kern: 0.03
             ])
         priceLabel.attributedText = attributedString
+        if let selectedId = item.selectedPersonId,
+            selectedId >= 0{
+            selectedByLabel.text = "Выбрана \(people[selectedId].phone)"
+            selectedByLabel.textColor = UIColor.Color.statusGreen
+        } else {
+            selectedByLabel.text = "Ожидает выбора"
+            selectedByLabel.textColor = .red
+        }
+        
     }
     
 }
