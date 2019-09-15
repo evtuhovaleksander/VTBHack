@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="2594" y="-343"/>
         </scene>
-        <!--People-->
+        <!--Groups-->
         <scene sceneID="4Ac-gd-CxS">
             <objects>
-                <viewControllerPlaceholder storyboardName="People" id="zIc-1O-jPh" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Groups" id="zIc-1O-jPh" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="kPG-mp-SkM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUN-kD-YMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

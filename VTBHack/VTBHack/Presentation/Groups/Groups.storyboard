@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F27-h6-7cs">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
@@ -33,11 +33,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BIy-Th-UJU"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Счета" image="bills_icon_tab" id="GeZ-YQ-wca"/>
                     <navigationItem key="navigationItem" title="Счета" id="gM5-QD-Njd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="omF-th-bSM">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addBarButtonItem" destination="omF-th-bSM" id="dej-3m-HUq"/>
                         <outlet property="tableView" destination="F27-h6-7cs" id="VGQ-Ac-qfA"/>
@@ -53,7 +55,7 @@
             <objects>
                 <viewController id="8xO-57-Hvp" customClass="MainContainerViewController" customModule="VTBHack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o6I-3h-0ea">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fk4-3H-VkF">
@@ -125,7 +127,6 @@
                         <viewLayoutGuide key="safeArea" id="jnf-Lu-HrU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Счет" id="34s-CT-fzS"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="amountLabel" destination="Vy7-Ok-YZC" id="dLg-u1-cX7"/>
                         <outlet property="containerView" destination="Zt7-jU-JmV" id="r0H-Z4-fMQ"/>
@@ -138,21 +139,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33q-gi-avj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1772" y="192"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="k6o-0z-6UV">
-            <objects>
-                <viewController storyboardIdentifier="ChatViewController" id="Dqs-ao-ERg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Bbt-NY-5wc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.76490186365662405" green="1" blue="0.75654533192772544" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <viewLayoutGuide key="safeArea" id="cwm-DH-Wss"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qNi-g6-r6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="641" y="978"/>
         </scene>
         <!--Items View Controller-->
         <scene sceneID="vdM-Jj-Bzj">
@@ -216,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xqh-M8-fId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2322" y="978"/>
+            <point key="canvasLocation" x="2354" y="978"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bCy-Pd-NyM">
@@ -253,7 +239,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-9n-7MO" customClass="VideoPreviewView" customModule="QRCode_Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-9n-7MO" customClass="VideoPreviewView" customModule="VTBHack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сканировать чек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-Bm-Eak">
@@ -454,6 +440,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bills_icon_tab" width="51" height="53"/>
         <image name="blue_close" width="14" height="14"/>
     </resources>
 </document>
