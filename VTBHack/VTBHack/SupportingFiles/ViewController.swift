@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBalance()
         setupCards()
         setupSecondStack()
         view.backgroundColor = UIColor(hex: "f8f8f8")
@@ -45,7 +46,12 @@ class ViewController: UIViewController {
         collectionView.reloadData()
         collectionView.backgroundColor = UIColor(hex: "f8f8f8")
     }
-
+    
+    func setupBalance() {
+        let amount = ServiceLayer.shared.infoService.accountInfo?.data.total ?? 0
+        moneyAmount.text = "\(amount), 00 ₽"
+    }
+    
     func setupCards() {
         let firstCard: MainView = MainView.loadFromNib()
         firstCard.cardImage.image = UIImage(named: "group2")

@@ -429,8 +429,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="amountTextField" destination="etk-7e-i1a" id="ngb-Gf-z1t"/>
-                        <outlet property="nameTextField" destination="S2P-c7-SlQ" id="JtZ-Fc-24S"/>
+                        <outlet property="amountTextField" destination="G71-Hd-MJp" id="iF8-dk-eRb"/>
+                        <outlet property="priceTextField" destination="etk-7e-i1a" id="xuN-Jr-61I"/>
                         <outlet property="quantityTextField" destination="cDV-sC-Zse" id="Ni7-7s-14w"/>
                     </connections>
                 </viewController>
