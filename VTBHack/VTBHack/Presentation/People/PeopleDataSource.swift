@@ -9,10 +9,19 @@
 import UIKit
 import MultipeerConnectivity
 
-struct Contact {
-    var phone: String
-    var nickName: String
+class Contact {
+    var phone: String = ""
+    var nickName: String = ""
     var selected = false
+    
+    var items = [Item]()
+    var invoiceInfo: InvoiceInfoDto?
+    
+    init(phone: String, nickname: String, selected: Bool) {
+        self.phone = phone
+        self.nickName = nickname
+        self.selected = selected
+    }
 }
 
 class PeopleDataSource: NSObject {
@@ -25,8 +34,8 @@ class ContactBookPeopleDataSource: PeopleDataSource {
     override init() {
         super.init()
         people = [
-            Contact(phone: "79999999999", nickName: "Никита", selected: false),
-            Contact(phone: "78888888888", nickName: "Настя", selected: false)
+            Contact(phone: "79999999999", nickname: "Никита", selected: false),
+            Contact(phone: "78888888888", nickname: "Настя", selected: false)
         ]
     }
 }
@@ -51,7 +60,7 @@ extension MultiPeerPeopleDataSource: MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
             let components = peerID.displayName.components(separatedBy: "#")
         guard components[0] != ServiceLayer.shared.infoService.identifier ?? "" else { return }
-            people.append(Contact(phone: components[0], nickName: components[1], selected: false))
+            people.append(Contact(phone: components[0], nickname: components[1], selected: false))
             if allowReload {
                 tableview?.reloadData()
             }

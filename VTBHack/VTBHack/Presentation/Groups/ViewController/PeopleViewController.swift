@@ -13,6 +13,10 @@ class PeopleViewController: UIViewController {
     @IBOutlet weak var addPeopleButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -23,8 +27,13 @@ class PeopleViewController: UIViewController {
     var model = [Contact]() {
         didSet { tableView.reloadData() }
     }
+    
+    var interactor = PeopleInteractor()
+    
     var cellID = "\(PartnerCell.self)"
     let headerID = "\(GroupSectionView.self)"
+    
+    private let refreshControl = UIRefreshControl()
     
     func setupTableView() {
         tableView.delegate = self
@@ -33,6 +42,13 @@ class PeopleViewController: UIViewController {
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(UINib(nibName: headerID, bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
+        
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(obtainInvoices(_:)), for: .valueChanged)
+    }
+    
+    @objc private func refreshData(_ sender: Any) {
+        
     }
     
     @IBAction func addPeopleTapped(_ sender: Any) {
@@ -119,11 +135,15 @@ class PeopleViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "ОК", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0]
             guard let phone = textField?.text else { return }
-            let contact = Contact(phone: phone, nickName: phone, selected: true)
+            let contact = Contact(phone: phone, nickname: phone, selected: true)
             self.model.append(contact)
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc private func obtainInvoices(_ sender: Any) {
+        
     }
 
 }

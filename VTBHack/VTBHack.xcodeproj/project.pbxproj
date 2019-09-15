@@ -12,6 +12,7 @@
 		30F9A4E4232D50990043082C /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4E2232D50990043082C /* CardCell.xib */; };
 		30F9A4EB232D8FE60043082C /* SugestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9A4EA232D8FE60043082C /* SugestsView.swift */; };
 		30F9A4ED232D908D0043082C /* SugestsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F9A4EC232D908D0043082C /* SugestsView.xib */; };
+		CA851A90232E337B00973CCE /* PeopleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA851A8F232E337B00973CCE /* PeopleInteractor.swift */; };
 		CABAC173232D0EA80069D545 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC172232D0EA80069D545 /* AccountService.swift */; };
 		CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC177232D0FFA0069D545 /* AuthRequest.swift */; };
 		CABAC17D232D10930069D545 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC17C232D10930069D545 /* Parser.swift */; };
@@ -123,6 +124,7 @@
 		30F9A4EC232D908D0043082C /* SugestsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SugestsView.xib; sourceTree = "<group>"; };
 		62958855CA6EBB12BBDA1C58 /* Pods-VTBHack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.debug.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.debug.xcconfig"; sourceTree = "<group>"; };
 		ADDAF2201AE63377F42FEEC1 /* Pods-VTBHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VTBHack.release.xcconfig"; path = "Target Support Files/Pods-VTBHack/Pods-VTBHack.release.xcconfig"; sourceTree = "<group>"; };
+		CA851A8F232E337B00973CCE /* PeopleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleInteractor.swift; sourceTree = "<group>"; };
 		CABAC172232D0EA80069D545 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		CABAC177232D0FFA0069D545 /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		CABAC17C232D10930069D545 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 				DEEE1EC9232DB5260022139B /* PeopleCell.xib */,
 				DEEE1ECA232DB5260022139B /* PeopleDataSource.swift */,
 				DEEE1ECB232DB5260022139B /* PeoplePickerViewController.swift */,
+				CA851A8F232E337B00973CCE /* PeopleInteractor.swift */,
 			);
 			path = People;
 			sourceTree = "<group>";
@@ -760,6 +763,7 @@
 				CABAC205232DFAE70069D545 /* RFBorder.swift in Sources */,
 				30F9A4E3232D50990043082C /* CardCell.swift in Sources */,
 				CABAC1FC232DFAE70069D545 /* ChatController+DataSource.swift in Sources */,
+				CA851A90232E337B00973CCE /* PeopleInteractor.swift in Sources */,
 				DEEE1EBB232DB4F40022139B /* SelectorCell.swift in Sources */,
 				CABAC1A5232D69EC0069D545 /* GroupCell.swift in Sources */,
 				CABAC184232D117D0069D545 /* RequestConfig.swift in Sources */,
