@@ -29,9 +29,9 @@ class AddItemViewController: UIViewController {
     }
     
     @IBAction func addTapped(_ sender: Any) {
-        let price = priceTextField.text ?? "10"
-        let name = amountTextField.text
+        let name = amountTextField.text ?? ""
+        guard let price = Int(priceTextField.text ?? "") else { return }
         let quantity = quantityTextField.text
-        let item = Item(price: Int(price), title: name)
+        let item = Item(price: price, title: name)
     }
 }
