@@ -8,5 +8,5 @@ target 'VTBHack' do
   # Pods for VTBHack
   pod 'Alamofire'
   pod 'CryptoSwift'
-
+  pod 'Texture'
 end

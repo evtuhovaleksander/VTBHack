@@ -27,7 +27,8 @@ class MainContainerViewController: UIViewController {
     var currentViewController: UIViewController? = nil
     
     lazy var chatViewController: UIViewController = {
-        groupsStoryboard.instantiateViewController(withIdentifier: "ChatViewController")
+        let vc = ChatController()
+        return vc
     }()
     lazy var checkViewController: ItemsViewController = {
         let checkViewController = groupsStoryboard
@@ -45,11 +46,19 @@ class MainContainerViewController: UIViewController {
         super.viewDidLoad()
         setupNavbar()
         setupSegmentedControl()
-        showController(index: 0)
+        showController(index: 1)
+    }
+    
+    var isLayoutSetuped = false
+    
+    override func viewDidLayoutSubviews() {
+        guard !isLayoutSetuped else { return }
+        showController(index: 1)
+        isLayoutSetuped = true
     }
     
     func setupSegmentedControl() {
-        
+        segmentedControl.selectedSegmentIndex = 1
     }
     
     func setupNavbar() {
