@@ -31,11 +31,13 @@ class AuthController: UIViewController {
     }
     
     func getFSID() {
+        ModalLoadingIndicator.show()
         ServiceLayer.shared.accountService.obtainSession { result in
             switch result {
             case .error(let error):
                 print(error)
                 self.showError(error)
+                ModalLoadingIndicator.hide()
             case .success(let model):
                 dump(model)
                 self.getAddress()
@@ -49,6 +51,7 @@ class AuthController: UIViewController {
         ServiceLayer.shared.accountService.obtainAccountAddress(identifier: identifierSha) { result in
             switch result {
             case .error(let error):
+                ModalLoadingIndicator.hide()
                 self.showError(error)
             case .success(let model):
                 dump(model)
@@ -63,8 +66,10 @@ class AuthController: UIViewController {
             switch result {
             case .error(let error):
                 self.showError(error)
+                ModalLoadingIndicator.hide()
             case .success(let model):
                 dump(model)
+                ModalLoadingIndicator.hide()
                 ServiceLayer.shared.infoService.accountInfo = model
                 ServiceLayer.shared.infoService.identifier = self.identifierField.text ?? ""
                 ServiceLayer.shared.multiPeerService = MultiPeerService()

@@ -46,19 +46,29 @@
                                     <action selector="auth:" destination="OOX-o7-uvw" eventType="touchUpInside" id="HCx-2J-vbg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afS-ke-wb9">
+                                <rect key="frame" x="20" y="623" width="374" height="219"/>
+                                <connections>
+                                    <segue destination="uRU-aH-52u" kind="presentation" id="LJs-C9-IXn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="afS-ke-wb9" firstAttribute="leading" secondItem="tYc-1j-kgb" secondAttribute="leading" constant="20" id="0Ku-Pm-v4X"/>
                             <constraint firstItem="yES-oJ-lbt" firstAttribute="centerX" secondItem="sLB-sG-LJh" secondAttribute="centerX" id="184-tC-lAy"/>
                             <constraint firstItem="tYc-1j-kgb" firstAttribute="trailing" secondItem="BT6-1w-7fn" secondAttribute="trailing" constant="36" id="2BB-ot-2z8"/>
                             <constraint firstItem="yES-oJ-lbt" firstAttribute="top" secondItem="tYc-1j-kgb" secondAttribute="top" constant="136" id="4WO-OO-Gbx"/>
                             <constraint firstItem="BT6-1w-7fn" firstAttribute="leading" secondItem="tYc-1j-kgb" secondAttribute="leading" constant="36" id="BLA-IW-tk3"/>
                             <constraint firstItem="pZB-d9-ZOw" firstAttribute="leading" secondItem="tYc-1j-kgb" secondAttribute="leading" constant="36" id="ENc-aW-TZv"/>
+                            <constraint firstItem="tYc-1j-kgb" firstAttribute="trailing" secondItem="afS-ke-wb9" secondAttribute="trailing" constant="20" id="LoN-af-I6X"/>
                             <constraint firstItem="pZB-d9-ZOw" firstAttribute="top" secondItem="U7x-y2-0Es" secondAttribute="bottom" constant="22" id="Vyy-Gt-Qe8"/>
                             <constraint firstItem="tYc-1j-kgb" firstAttribute="trailing" secondItem="U7x-y2-0Es" secondAttribute="trailing" constant="36" id="XNw-l6-nsb"/>
                             <constraint firstItem="BT6-1w-7fn" firstAttribute="top" secondItem="pZB-d9-ZOw" secondAttribute="bottom" constant="100" id="eW1-MI-HBK"/>
+                            <constraint firstItem="tYc-1j-kgb" firstAttribute="bottom" secondItem="afS-ke-wb9" secondAttribute="bottom" constant="20" id="fcg-KK-kyA"/>
                             <constraint firstItem="pZB-d9-ZOw" firstAttribute="centerY" secondItem="sLB-sG-LJh" secondAttribute="centerY" id="kdV-IB-uYv"/>
                             <constraint firstItem="tYc-1j-kgb" firstAttribute="trailing" secondItem="pZB-d9-ZOw" secondAttribute="trailing" constant="36" id="ldI-pV-9n9"/>
+                            <constraint firstItem="afS-ke-wb9" firstAttribute="top" secondItem="BT6-1w-7fn" secondAttribute="bottom" constant="20" id="sUp-Fv-RxB"/>
                             <constraint firstItem="U7x-y2-0Es" firstAttribute="leading" secondItem="tYc-1j-kgb" secondAttribute="leading" constant="36" id="xYu-ph-A4t"/>
                             <constraint firstItem="BT6-1w-7fn" firstAttribute="centerX" secondItem="sLB-sG-LJh" secondAttribute="centerX" id="xZ3-cy-sOl"/>
                         </constraints>
@@ -125,4 +135,7 @@
             <point key="canvasLocation" x="977" y="-32"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ynK-kJ-WC9"/>
+    </inferredMetricsTieBreakers>
 </document>
