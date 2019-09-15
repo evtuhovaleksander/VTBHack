@@ -26,7 +26,7 @@ class AuthController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.Color.authDarkBlueBackground
         authButton.setTitle("Войти", for: .normal)
-        identifierField.text = "79999999999"
+        identifierField.text = "79999999998"
         //auth(self)
     }
     
