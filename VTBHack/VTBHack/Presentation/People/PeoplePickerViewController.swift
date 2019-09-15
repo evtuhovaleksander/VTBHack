@@ -22,10 +22,11 @@ class PeoplePickerViewController: UIViewController {
     var dataSource: PeopleDataSource!
     //var dataSource = ContactBookPeopleDataSource()
     let identifier = "\(PeopleCell.self)"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource.tableview = tableView
-       actionButton.backgroundColor = UIColor.Color.darkBlue
+        actionButton.backgroundColor = UIColor.Color.darkBlue
         actionButton.setTitle("Подтвердить", for: .normal)
         actionButton.layer.cornerRadius = 27
         actionButton.clipsToBounds = true
@@ -42,6 +43,7 @@ class PeoplePickerViewController: UIViewController {
     @IBAction func action(_ sender: Any) {
         delegate?.picked(contacts: dataSource.people.filter({ $0.selected }))
         navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }
 
