@@ -47,8 +47,6 @@ class ProfileViewController: UIViewController {
         
         ceeperNameLabel.text = "Кошелек"
         
-        
-        
         keepBalanceLabel.text = "\(900)Р"
         keepBalanceLabel.textColor = UIColor.Color.blueText
         
