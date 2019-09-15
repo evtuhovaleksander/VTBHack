@@ -253,7 +253,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-9n-7MO" customClass="VideoPreviewView" customModule="QRCode_Example" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cm-9n-7MO" customClass="VideoPreviewView" customModule="VTBHack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сканировать чек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sp-Bm-Eak">
@@ -443,8 +443,8 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="amountTextField" destination="etk-7e-i1a" id="ngb-Gf-z1t"/>
-                        <outlet property="nameTextField" destination="S2P-c7-SlQ" id="JtZ-Fc-24S"/>
+                        <outlet property="amountTextField" destination="G71-Hd-MJp" id="BLN-pM-MUq"/>
+                        <outlet property="priceTextField" destination="etk-7e-i1a" id="69X-SJ-B7w"/>
                         <outlet property="quantityTextField" destination="cDV-sC-Zse" id="Ni7-7s-14w"/>
                     </connections>
                 </viewController>
