@@ -67,7 +67,7 @@ class ItemsViewController: UIViewController {
     @IBAction func qrCodeScanDidTapped(_ sender: UIButton) {
         if isQRCodeParsed {
             for i in 0 ..< (pvc?.model.count ?? 0) {
-                let f = model.items.filter({ $0.selectedPersonId == i }).map({ $0.price })
+                let f = model.items.filter({ $0.selectedPersonId == i+1 }).map({ $0.price })
                 let sum = f.reduce(0, +)
                 let nn = "\(Date().timeIntervalSince1970)"
                 ServiceLayer.shared.accountService.obtainAccountAddress(identifier: pvc?.model[i].phone.sha256() ?? "") { result in
