@@ -19,4 +19,13 @@ class ItemsDataSource {
             items.append(item)
         }
     }
+    
+    init() {
+        items = [
+            Item(price: 1, title: "1"),
+            Item(price: 2, title: "2"),
+            Item(price: 3, title: "3"),
+            Item(price: 4, title: "4")
+        ]
+    }
 }

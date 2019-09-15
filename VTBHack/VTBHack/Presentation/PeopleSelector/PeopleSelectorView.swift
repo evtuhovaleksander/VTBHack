@@ -11,7 +11,7 @@ import UIKit
 class PeopleSelectorView: UIView {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var containerView: UIView!
-    
+    var selectedBlock: ((Int)->())?
     override func awakeFromNib() {
         super.awakeFromNib()
         translatesAutoresizingMaskIntoConstraints = false
@@ -58,6 +58,7 @@ class PeopleSelectorView: UIView {
                 }
             }
             }
+            selectedBlock?(currentIndex)
         } else {
             UIView.animate(withDuration: 1.0) {
                 for v in self.views {

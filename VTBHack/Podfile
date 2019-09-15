@@ -9,4 +9,5 @@ target 'VTBHack' do
   pod 'Alamofire'
   pod 'CryptoSwift'
   pod 'Texture'
+  pod 'IQKeyboardManagerSwift'
 end

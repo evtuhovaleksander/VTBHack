@@ -19,6 +19,7 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var quantityTextField: UITextField!
     
     weak var delegate: AddItemViewControllerDelegate?
+    var addBlock: ((Item)->())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +34,7 @@ class AddItemViewController: UIViewController {
         guard let price = Int(priceTextField.text ?? "") else { return }
         let quantity = quantityTextField.text
         let item = Item(price: price, title: name)
+        addBlock?(item)
+        navigationController?.popViewController(animated: true)
     }
 }

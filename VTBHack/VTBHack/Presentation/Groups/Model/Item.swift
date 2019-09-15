@@ -11,6 +11,7 @@ import Foundation
 class Item {
     var price: Int
     var title: String
+    var selectedPersonId: Int?
     
     init(price: Int, title: String) {
         self.price = price

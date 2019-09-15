@@ -82,10 +82,27 @@ class MainContainerViewController: UIViewController {
         let child = viewControllers[index]
         add(child, frame: containerView.frame)
         currentViewController = child
+        if index == 1 {
+            //checkViewController.people = peopleViewController.
+        }
     }
     
     @IBAction func segmentedValueChanged(_ sender: UISegmentedControl) {
         showController(index: sender.selectedSegmentIndex)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let iden = segue.identifier {
+            if
+                iden == "toAddItem",
+                let dst = segue.destination as? AddItemViewController {
+                dst.addBlock = { item in
+                    self.checkViewController.model.items.append(item)
+                    self.checkViewController.isQRCodeParsed = true
+                    self.checkViewController.updateData()
+                }
+            }
+        }
     }
 }
 

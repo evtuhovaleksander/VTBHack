@@ -19,6 +19,8 @@ class ItemsViewController: UIViewController {
     
     var isQRCodeParsed = false
     var model = ItemsDataSource()
+    var people = [0,1,2]// [Int]()
+    var currentPersonId = 0
     
     var qrCodeRawString: String? = nil
     
@@ -27,11 +29,14 @@ class ItemsViewController: UIViewController {
     private let itemCellID = "\(ItemCell.self)"
     private let addCellID = "\(AddItemCell.self)"
     private let headerID = "\(GroupSectionView.self)"
+    private var cnt: PeopleSelectorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupScanQRButton()
+        setupPicker()
+        cnt.isHidden = true
     }
     
     func setupTableView() {
@@ -78,8 +83,39 @@ class ItemsViewController: UIViewController {
         isQRCodeParsed = true
         scanQRButton.isHidden = true
         tableView.reloadData()
+        cnt.people = people
+        cnt.setup()
+        cnt.isHidden = false
     }
     
+    func setupPicker() {
+        cnt = PeopleSelectorView.loadFromNib()
+        view.addSubview(cnt)
+        cnt.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        cnt.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        cnt.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 20).isActive = true
+        cnt.people = people
+        cnt.selectedBlock = {
+            selId in
+            self.currentPersonId = selId
+            self.tableView.reloadData()
+        }
+        cnt.setup()
+    }
+    
+    func validate() {
+        if model.items.filter({ $0.selectedPersonId == nil }).count == 0 {
+            scanQRButton.setTitle("Рассчитаться", for: .normal)
+            scanQRButton.backgroundColor = UIColor.Color.statusGreen
+            scanQRButton.isHidden = false
+            cnt.isHidden = true
+        } else {
+            scanQRButton.setTitle("Сканируй QR код", for: .normal)
+            scanQRButton.backgroundColor = UIColor.Color.darkBlue
+            scanQRButton.isHidden = false
+            cnt.isHidden = false
+        }
+    }
 }
 
 
@@ -87,36 +123,102 @@ class ItemsViewController: UIViewController {
 extension ItemsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        switch section {
+        case 0:
+            return 55
+        case 1:
+            return 55
+        case 2:
+            return 0
+        default:
+           return 0
+        }
+        
         return 55
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard section == 2 else {
+            return nil
+        }
+        let f = UIView.init(frame: .zero)
+        f.backgroundColor = UIColor.Color.backgroundGray
+        return f
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        guard section == 2 else {
+            return 0.0
+        }
+        return 100.0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as? GroupSectionView
-        let title = section == 0 ? "ПОЗИЦИИ ЧЕКА" : ""
-        header?.headerTitle.text = title
+        var tit = ""
+        switch section {
+        case 0:
+            tit = "ПОЗИЦИИ ЧЕКА"
+        case 1:
+            tit = "\(currentPersonId == 0 ? "Мои позииции" : String(people[currentPersonId]))"
+        case 2:
+            tit = "Действия"
+        default:
+            tit = ""
+        }
+        
+        header?.headerTitle.text = tit
         return header
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if indexPath.row == model.items.count {
+        if indexPath.section == 2 {
             delegate?.didTapAddItem()
         }
+        
+        if indexPath.section == 1 {
+            let el = model.items.first(where: { return
+                $0.title == model.items[indexPath.row].title
+                && $0.selectedPersonId == currentPersonId
+                
+            })
+            el?.selectedPersonId = nil
+        } else {
+            model.items[indexPath.row].selectedPersonId = currentPersonId
+        }
+        
+        tableView.reloadData()
+        validate()
         
     }
 }
 
 extension ItemsViewController: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.items.count + 1
+        switch section {
+        case 0:
+            return model.items.count
+        case 1:
+            return model.items.filter({ $0.selectedPersonId ?? -999 == currentPersonId }).count
+        case 2:
+            return 1
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Последняя ячейка для добавить
-        if indexPath.row == model.items.count {
+        if indexPath.section == 2 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: addCellID, for: indexPath)
                 as? AddItemCell else { return UITableViewCell() }
             cell.selectionStyle = .none
@@ -126,7 +228,7 @@ extension ItemsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: itemCellID, for: indexPath)
             as? ItemCell else { return UITableViewCell() }
         let item = model.items[indexPath.row]
-        cell.fill(item: item)
+        cell.fill(item: item, people: people)
         return cell
     }
     

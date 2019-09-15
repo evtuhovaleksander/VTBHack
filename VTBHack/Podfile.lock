@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.8.2)
   - CryptoSwift (1.0.0)
+  - IQKeyboardManagerSwift (6.4.1)
   - PINCache (3.0.1-beta.6):
     - PINCache/Arc-exception-safe (= 3.0.1-beta.6)
     - PINCache/Core (= 3.0.1-beta.6)
@@ -40,12 +41,14 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - CryptoSwift
+  - IQKeyboardManagerSwift
   - Texture
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - CryptoSwift
+    - IQKeyboardManagerSwift
     - PINCache
     - PINOperation
     - PINRemoteImage
@@ -54,11 +57,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  IQKeyboardManagerSwift: d2df660d0b8d64a15cb2537c9ff303213fa515b2
   PINCache: d195fdba255283f7e9900a55e3cced377f431f9b
   PINOperation: 24b774353ca248fcf87d67b2d61eef42087c125a
   PINRemoteImage: d6d51c5d2adda55f1ce30c96e850b6c4ebd2856a
   Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
 
-PODFILE CHECKSUM: 4809dba3122c1fa66c0b4892accfececc6c4b9c3
+PODFILE CHECKSUM: c2189014930d41ed7ff6f37e5b1dc7b55bc3aeb9
 
 COCOAPODS: 1.7.5

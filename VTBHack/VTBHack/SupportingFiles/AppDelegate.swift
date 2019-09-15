@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        
+        IQKeyboardManager.shared.enable = true
 //        let rawQRCode = "t=20190913T130200&s=190.00&fn=9287440300122136&i=61528&fp=1207037887&n=1"
 //        ServiceLayer.shared.checkService.obtainCheckInfo(rawQRCode: rawQRCode) { result in
 //            switch result {
