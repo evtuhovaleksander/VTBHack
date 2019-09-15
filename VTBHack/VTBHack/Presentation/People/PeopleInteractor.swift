@@ -12,7 +12,13 @@ class PeopleInteractor {
     
     let dispatchGroup = DispatchGroup()
     
+    
+    
 //    func obtainAllInvoicesInfo(model: [Contact], completion: ) {
-//        for item in model
+//        for item in model {
+//            ServiceLayer.shared.incoiveService.obtainInvoiceInfo(number: "rx1234", recipient: "", completion: { [weak self] result in
+//                }
+//            )
+//        }
 //    }
 }
