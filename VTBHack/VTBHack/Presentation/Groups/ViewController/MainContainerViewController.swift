@@ -36,8 +36,8 @@ class MainContainerViewController: UIViewController {
         checkViewController.delegate = self
         return checkViewController
     }()
-    lazy var peopleViewController: UIViewController = {
-        groupsStoryboard.instantiateViewController(withIdentifier: "PeopleViewController")
+    lazy var peopleViewController: PeopleViewController = {
+        groupsStoryboard.instantiateViewController(withIdentifier: "PeopleViewController") as! PeopleViewController
     }()
     
     lazy var viewControllers = [chatViewController, checkViewController, peopleViewController]
@@ -83,7 +83,9 @@ class MainContainerViewController: UIViewController {
         add(child, frame: containerView.frame)
         currentViewController = child
         if index == 1 {
-            //checkViewController.people = peopleViewController.
+            var np = [Contact(phone: "Я", nickName: "Я", selected: false)]
+            np.append(contentsOf: peopleViewController.model)
+            checkViewController.people = np
         }
     }
     

@@ -19,7 +19,7 @@ class ItemsViewController: UIViewController {
     
     var isQRCodeParsed = false
     var model = ItemsDataSource()
-    var people = [0,1,2]// [Int]()
+    var people = [Contact]()
     var currentPersonId = 0
     
     var qrCodeRawString: String? = nil
@@ -47,6 +47,15 @@ class ItemsViewController: UIViewController {
         tableView.register(UINib(nibName: itemCellID, bundle: nil), forCellReuseIdentifier: itemCellID)
         tableView.register(UINib(nibName: addCellID, bundle: nil), forCellReuseIdentifier: addCellID)
         tableView.register(UINib(nibName: headerID, bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if model.items.count > 0 {
+            validate()
+            cnt.people = people
+            cnt.setup()
+        }
     }
     
     func setupScanQRButton() {
@@ -161,7 +170,7 @@ extension ItemsViewController: UITableViewDelegate {
         case 0:
             tit = "ПОЗИЦИИ ЧЕКА"
         case 1:
-            tit = "\(currentPersonId == 0 ? "Мои позииции" : String(people[currentPersonId]))"
+            tit = "\(currentPersonId == 0 ? "Мои позииции" : people[currentPersonId].phone)"
         case 2:
             tit = "Действия"
         default:
