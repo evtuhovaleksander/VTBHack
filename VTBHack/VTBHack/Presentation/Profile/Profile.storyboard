@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fw1-mi-QUo">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="184"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="96"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-5M-jdq">
-                                        <rect key="frame" x="96" y="115.5" width="99" height="41"/>
+                                        <rect key="frame" x="96" y="27.5" width="99" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labeldawd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSK-Yl-u1B">
                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="23"/>
@@ -39,7 +39,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-YF-ua4">
-                                        <rect key="frame" x="16" y="104" width="64" height="64"/>
+                                        <rect key="frame" x="16" y="16" width="64" height="64"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7vj-Km-u9G">
                                                 <rect key="frame" x="16" y="16" width="32" height="32"/>
@@ -58,10 +58,10 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.063477277760000006" green="0.1616572738" blue="0.37444186210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2Ny-5M-jdq" secondAttribute="trailing" constant="16" id="3PH-vs-F35"/>
-                                    <constraint firstAttribute="height" constant="184" id="KOY-Gg-ZaA"/>
+                                    <constraint firstAttribute="height" constant="96" id="KOY-Gg-ZaA"/>
                                     <constraint firstAttribute="bottom" secondItem="9xB-YF-ua4" secondAttribute="bottom" constant="16" id="Yu0-lg-WPm"/>
                                     <constraint firstItem="2Ny-5M-jdq" firstAttribute="centerY" secondItem="9xB-YF-ua4" secondAttribute="centerY" id="bI1-9x-yHW"/>
                                     <constraint firstItem="2Ny-5M-jdq" firstAttribute="leading" secondItem="9xB-YF-ua4" secondAttribute="trailing" constant="16" id="dBV-J3-Gpw"/>
@@ -69,7 +69,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYS-8B-5mk">
-                                <rect key="frame" x="0.0" y="184" width="414" height="146"/>
+                                <rect key="frame" x="0.0" y="96" width="414" height="146"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1l-uJ-Cfx">
                                         <rect key="frame" x="16" y="32" width="54" height="25.5"/>
@@ -119,7 +119,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jxw-RE-X3g">
-                                <rect key="frame" x="0.0" y="340" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="252" width="414" height="60"/>
                                 <subviews>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qt-dZ-e9L">
                                         <rect key="frame" x="349" y="14.5" width="51" height="31"/>
@@ -158,6 +158,7 @@
                     <tabBarItem key="tabBarItem" title="Item" image="profile_icon_tab" id="DDA-VZ-bw7"/>
                     <navigationItem key="navigationItem" title="Профиль" id="UdL-SP-2IR">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="qrcode" id="cyY-rc-jRb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="zF0-im-WU9" kind="show" id="BQ9-cu-hzW"/>
                             </connections>
