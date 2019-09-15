@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ItemsViewControllerDelegate: class {
+    func didTapAddItem()
+}
+
 class ItemsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +21,8 @@ class ItemsViewController: UIViewController {
     var model = ItemsDataSource()
     
     var qrCodeRawString: String? = nil
+    
+    weak var delegate: ItemsViewControllerDelegate?
     
     private let itemCellID = "\(ItemCell.self)"
     private let addCellID = "\(AddItemCell.self)"
@@ -74,12 +80,9 @@ class ItemsViewController: UIViewController {
         tableView.reloadData()
     }
     
-    func showMenuAddItem() {
-//        let controller = MenuViewController.getController(titles: ["один", "что-то тут"], actions: [{}, {}])
-        
-    }
-    
 }
+
+
 
 extension ItemsViewController: UITableViewDelegate {
     
@@ -98,7 +101,7 @@ extension ItemsViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if indexPath.row == model.items.count {
-            showMenuAddItem()
+            delegate?.didTapAddItem()
         }
         
     }
@@ -133,5 +136,19 @@ extension ItemsViewController: QRCodeScanViewControllerDelegate {
     func didScanQRCode(rawString: String) {
         qrCodeRawString = rawString
         obtainCheckData()
+    }
+}
+
+extension UIViewController {
+    func takeScreenshot() -> UIImage? {
+        var screenshotImage: UIImage?
+        let layer = UIApplication.shared.keyWindow!.layer
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale);
+        guard let context = UIGraphicsGetCurrentContext() else {return nil}
+        layer.render(in:context)
+        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return screenshotImage
     }
 }

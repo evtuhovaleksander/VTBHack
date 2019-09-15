@@ -49,6 +49,7 @@
 		CABAC1D1232DB8B00069D545 /* QRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */; };
 		CABAC1D4232DB9030069D545 /* VideoPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */; };
 		CABAC1D6232DC1550069D545 /* ModalLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */; };
+		CABAC1D8232DD42F0069D545 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */; };
 		DE4280A9232D664C00EE9D78 /* MyAddressQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */; };
 		DE4280B7232D800500EE9D78 /* MultiPeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4280B6232D800500EE9D78 /* MultiPeerService.swift */; };
 		DE534D5F232D4C0500E8F877 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE534D5B232D4C0500E8F877 /* MainView.xib */; };
@@ -137,6 +138,7 @@
 		CABAC1D0232DB8B00069D545 /* QRCodeScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanViewController.swift; sourceTree = "<group>"; };
 		CABAC1D3232DB9030069D545 /* VideoPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewView.swift; sourceTree = "<group>"; };
 		CABAC1D5232DC1550069D545 /* ModalLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalLoadingIndicator.swift; sourceTree = "<group>"; };
+		CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		DE4280A8232D664C00EE9D78 /* MyAddressQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAddressQRCodeViewController.swift; sourceTree = "<group>"; };
 		DE4280B6232D800500EE9D78 /* MultiPeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPeerService.swift; sourceTree = "<group>"; };
 		DE534D5B232D4C0500E8F877 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				CABAC1A7232D705F0069D545 /* GroupsViewController.swift */,
 				CABAC1B2232D8A860069D545 /* MainContainerViewController.swift */,
 				CABAC1BA232DA4B90069D545 /* ItemsViewController.swift */,
+				CABAC1D7232DD42F0069D545 /* AddItemViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -714,6 +717,7 @@
 				CABAC178232D0FFA0069D545 /* AuthRequest.swift in Sources */,
 				DEB97A3F232CDFFE00F85CC3 /* AppDelegate.swift in Sources */,
 				CABAC18C232D20030069D545 /* SessionRequest.swift in Sources */,
+				CABAC1D8232DD42F0069D545 /* AddItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
