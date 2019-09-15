@@ -10,4 +10,13 @@ import Foundation
 
 class ItemsDataSource {
     var items = [Item]()
+    var checkItemsDto: CheckInfoDto? = nil
+    
+    func updateData() {
+        guard let checkItemsDto = checkItemsDto else { return }
+        checkItemsDto.items.forEach {
+            let item = Item(price: $0.price, title: $0.name)
+            items.append(item)
+        }
+    }
 }
