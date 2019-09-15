@@ -29,8 +29,11 @@ class MainContainerViewController: UIViewController {
     lazy var chatViewController: UIViewController = {
         groupsStoryboard.instantiateViewController(withIdentifier: "ChatViewController")
     }()
-    lazy var checkViewController: UIViewController = {
-        groupsStoryboard.instantiateViewController(withIdentifier: "CheckViewController")
+    lazy var checkViewController: ItemsViewController = {
+        let checkViewController = groupsStoryboard
+            .instantiateViewController(withIdentifier: "CheckViewController") as! ItemsViewController
+        checkViewController.delegate = self
+        return checkViewController
     }()
     lazy var peopleViewController: UIViewController = {
         groupsStoryboard.instantiateViewController(withIdentifier: "PeopleViewController")
@@ -77,3 +80,8 @@ class MainContainerViewController: UIViewController {
     }
 }
 
+extension MainContainerViewController: ItemsViewControllerDelegate {
+    func didTapAddItem() {
+        performSegue(withIdentifier: "toAddItem", sender: nil)
+    }
+}
