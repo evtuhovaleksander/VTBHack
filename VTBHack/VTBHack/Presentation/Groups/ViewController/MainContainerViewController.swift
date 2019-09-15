@@ -88,7 +88,7 @@ class MainContainerViewController: UIViewController {
         add(child, frame: containerView.frame)
         currentViewController = child
         if index == 1 {
-            var np = [Contact(phone: "Я", nickName: "Я", selected: false)]
+            var np = [Contact(phone: "Я", nickname: "Я", selected: false)]
             np.append(contentsOf: peopleViewController.model)
             checkViewController.people = np
             checkViewController.pvc = peopleViewController
